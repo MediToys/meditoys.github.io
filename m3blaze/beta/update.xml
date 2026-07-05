@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
   <app appid='bclcfebikmapndmhcahabcaggkkdidgp'>
-    <updatecheck codebase='https://meditoys.github.io/m3blaze/beta/m3blaze.crx' version='1.3.1' />
+    <updatecheck codebase='https://meditoys.github.io/m3blaze/beta/m3blaze.crx' version='1.3.2' />
   </app>
 </gupdate>
