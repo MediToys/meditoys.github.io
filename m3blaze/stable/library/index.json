@@ -1,0 +1,15 @@
+{
+  "channel": "stable",
+  "extension_version": "1.1.0",
+  "counts": {
+    "snippets": 1,
+    "pdf_templates": 0,
+    "files": 1
+  },
+  "files": [
+    {
+      "path": "snippets/sample-snippets.json",
+      "size": 6787
+    }
+  ]
+}
