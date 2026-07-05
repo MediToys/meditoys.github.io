@@ -1,0 +1,741 @@
+{
+  "toggle_groups": {
+    "app_type": {
+      "m3blaze_type": "single_select",
+      "label": "申請種別",
+      "options": {
+        "新規": "app_new",
+        "更新": "app_renew",
+        "等級変更": "app_change"
+      }
+    },
+    "birth_era": {
+      "m3blaze_type": "single_select",
+      "label": "生年月日元号",
+      "options": {
+        "明治": "era_meiji",
+        "大正": "era_taisho",
+        "昭和": "era_showa",
+        "平成": "era_heisei",
+        "令和": "era_reiwa"
+      }
+    },
+    "body_techo": {
+      "m3blaze_type": "single_select",
+      "label": "身体手帳",
+      "options": {
+        "有": "body_yes",
+        "無": "body_no"
+      }
+    },
+    "first_era": {
+      "m3blaze_type": "single_select",
+      "label": "初診元号",
+      "options": {
+        "昭和": "f_showa",
+        "平成": "f_heisei",
+        "令和": "f_reiwa"
+      }
+    },
+    "hosp_era": {
+      "m3blaze_type": "single_select",
+      "label": "本院初診元号",
+      "options": {
+        "昭和": "h_showa",
+        "平成": "h_heisei",
+        "令和": "h_reiwa"
+      }
+    },
+    "tx1_type": {
+      "m3blaze_type": "single_select",
+      "label": "治療歴1入外",
+      "options": {
+        "入院": "tx1_in",
+        "外来": "tx1_out"
+      }
+    },
+    "tx2_type": {
+      "m3blaze_type": "single_select",
+      "label": "治療歴2入外",
+      "options": {
+        "入院": "tx2_in",
+        "外来": "tx2_out"
+      }
+    },
+    "tx3_type": {
+      "m3blaze_type": "single_select",
+      "label": "治療歴3入外",
+      "options": {
+        "入院": "tx3_in",
+        "外来": "tx3_out"
+      }
+    },
+    "tx4_type": {
+      "m3blaze_type": "single_select",
+      "label": "治療歴4入外",
+      "options": {
+        "入院": "tx4_in",
+        "外来": "tx4_out"
+      }
+    },
+    "tx5_type": {
+      "m3blaze_type": "single_select",
+      "label": "治療歴5入外",
+      "options": {
+        "入院": "tx5_in",
+        "外来": "tx5_out"
+      }
+    },
+    "tx6_type": {
+      "m3blaze_type": "single_select",
+      "label": "治療歴6入外",
+      "options": {
+        "入院": "tx6_in",
+        "外来": "tx6_out"
+      }
+    },
+    "dep": {
+      "m3blaze_type": "multi_select",
+      "label": "(1)抑鬱状態",
+      "options": {
+        "①思考・運動抑制": "dep_1",
+        "②易刺激性・興奮": "dep_2",
+        "③憂鬱気分": "dep_3",
+        "④その他": "dep_4"
+      },
+      "category_toggle": "cat_dep"
+    },
+    "manic": {
+      "m3blaze_type": "multi_select",
+      "label": "(2)そう状態",
+      "options": {
+        "①行為心迫": "manic_1",
+        "②多弁": "manic_2",
+        "③感情高揚・易刺激性": "manic_3",
+        "④その他": "manic_4"
+      },
+      "category_toggle": "cat_manic"
+    },
+    "halluc": {
+      "m3blaze_type": "multi_select",
+      "label": "(3)幻覚妄想状態",
+      "options": {
+        "①幻覚": "hal_1",
+        "②妄想": "hal_2",
+        "③その他": "hal_3"
+      },
+      "category_toggle": "cat_halluc"
+    },
+    "excite": {
+      "m3blaze_type": "multi_select",
+      "label": "(4)精神運動興奮",
+      "options": {
+        "①興奮": "exc_1",
+        "②こん迷": "exc_2",
+        "③拒絶": "exc_3",
+        "④その他": "exc_4"
+      },
+      "category_toggle": "cat_excite"
+    },
+    "residual": {
+      "m3blaze_type": "multi_select",
+      "label": "(5)統合失調症残遺",
+      "options": {
+        "①自閉": "res_1",
+        "②感情平板化": "res_2",
+        "③意欲の減退": "res_3",
+        "④その他": "res_4"
+      },
+      "category_toggle": "cat_residual"
+    },
+    "behav": {
+      "m3blaze_type": "multi_select",
+      "label": "(6)情動及び行動",
+      "options": {
+        "①爆発性": "beh_1",
+        "②暴力・衝動行為": "beh_2",
+        "③多動": "beh_3",
+        "④食行動の異常": "beh_4",
+        "⑤チック・汚言": "beh_5",
+        "⑥その他": "beh_6"
+      },
+      "category_toggle": "cat_behav"
+    },
+    "anxiety": {
+      "m3blaze_type": "multi_select",
+      "label": "(7)不安及び不穏",
+      "options": {
+        "①強度の不安・恐怖感": "anx_1",
+        "②強迫体験": "anx_2",
+        "③心的外傷に関連する症状": "anx_3",
+        "④解離・転換症状": "anx_4",
+        "⑤その他": "anx_5"
+      },
+      "category_toggle": "cat_anxiety"
+    },
+    "epi_items": {
+      "m3blaze_type": "multi_select",
+      "label": "(8)てんかん",
+      "options": {
+        "①てんかん発作": "epi_1",
+        "②意識障がい": "epi_cons",
+        "③その他": "epi_3"
+      },
+      "category_toggle": "cat_epi"
+    },
+    "epi_type": {
+      "m3blaze_type": "multi_select",
+      "label": "(8)発作区分",
+      "options": {
+        "ア随意運動喪失": "epi_a",
+        "イ行為途絶非転倒": "epi_b",
+        "ウ転倒発作": "epi_c",
+        "エ状況不適合行為": "epi_d"
+      }
+    },
+    "substance_use": {
+      "m3blaze_type": "single_select",
+      "label": "(9)使用有無",
+      "options": {
+        "有": "use_yes",
+        "無": "use_no"
+      }
+    },
+    "substance": {
+      "m3blaze_type": "multi_select",
+      "label": "(9)物質種類",
+      "options": {
+        "①アルコール": "sub_1",
+        "②覚せい剤": "sub_2",
+        "③有機溶剤": "sub_3",
+        "④その他": "sub_4"
+      },
+      "category_toggle": "cat_subst"
+    },
+    "subst_class": {
+      "m3blaze_type": "multi_select",
+      "label": "(9)物質分類",
+      "options": {
+        "ア乱用": "sbc_a",
+        "イ依存": "sbc_b",
+        "ウ残遺性": "sbc_c",
+        "エその他": "sbc_d"
+      }
+    },
+    "cognitive": {
+      "m3blaze_type": "multi_select",
+      "label": "(10)知能記憶",
+      "options": {
+        "①知的障がい": "cog_intell",
+        "②認知症": "cog_dementia",
+        "③記憶障がい": "cog_memory",
+        "④学習の困難": "cog_learning",
+        "⑤遂行機能障がい": "cog_exec",
+        "⑥注意障がい": "cog_attn",
+        "⑦その他": "cog_other"
+      }
+    },
+    "intell_grade": {
+      "m3blaze_type": "single_select",
+      "label": "知的障がい程度",
+      "options": {
+        "ア軽度": "int_a",
+        "イ中等度": "int_b",
+        "ウ重度": "int_c"
+      }
+    },
+    "dem_grade": {
+      "m3blaze_type": "single_select",
+      "label": "認知症程度",
+      "options": {
+        "ア軽度": "dem_a",
+        "イ中等度": "dem_b",
+        "ウ重度": "dem_c"
+      }
+    },
+    "ryoiku": {
+      "m3blaze_type": "single_select",
+      "label": "療育手帳",
+      "options": {
+        "有": "ry_yes",
+        "無": "ry_no"
+      }
+    },
+    "learning": {
+      "m3blaze_type": "multi_select",
+      "label": "学習の困難",
+      "options": {
+        "ア読み": "lrn_a",
+        "イ書き": "lrn_b",
+        "ウ算数": "lrn_c",
+        "エその他": "lrn_d"
+      },
+      "label_toggle": "lrn_label"
+    },
+    "pdd": {
+      "m3blaze_type": "multi_select",
+      "label": "(11)発達障がい",
+      "options": {
+        "①社会関係": "pdd_1",
+        "②コミュニケーション": "pdd_2",
+        "③限定反復": "pdd_3",
+        "④その他": "pdd_4"
+      },
+      "category_toggle": "cat_pdd"
+    },
+    "living": {
+      "m3blaze_type": "single_select",
+      "label": "生活環境",
+      "options": {
+        "入院": "liv_hosp",
+        "入所": "liv_inst",
+        "在宅": "liv_home"
+      }
+    },
+    "living_sub": {
+      "m3blaze_type": "single_select",
+      "label": "在宅区分",
+      "options": {
+        "ア単身": "liv_single",
+        "イ家族等と同居": "liv_family"
+      }
+    },
+    "adl1": {
+      "m3blaze_type": "single_select",
+      "label": "(1)食事",
+      "options": {
+        "1": "adl1_1",
+        "2": "adl1_2",
+        "3": "adl1_3",
+        "4": "adl1_4"
+      }
+    },
+    "adl2": {
+      "m3blaze_type": "single_select",
+      "label": "(2)清潔",
+      "options": {
+        "1": "adl2_1",
+        "2": "adl2_2",
+        "3": "adl2_3",
+        "4": "adl2_4"
+      }
+    },
+    "adl3": {
+      "m3blaze_type": "single_select",
+      "label": "(3)金銭",
+      "options": {
+        "1": "adl3_1",
+        "2": "adl3_2",
+        "3": "adl3_3",
+        "4": "adl3_4"
+      }
+    },
+    "adl4": {
+      "m3blaze_type": "single_select",
+      "label": "(4)通院",
+      "options": {
+        "1": "adl4_1",
+        "2": "adl4_2",
+        "3": "adl4_3",
+        "4": "adl4_4"
+      }
+    },
+    "adl5": {
+      "m3blaze_type": "single_select",
+      "label": "(5)対人",
+      "options": {
+        "1": "adl5_1",
+        "2": "adl5_2",
+        "3": "adl5_3",
+        "4": "adl5_4"
+      }
+    },
+    "adl6": {
+      "m3blaze_type": "single_select",
+      "label": "(6)安全",
+      "options": {
+        "1": "adl6_1",
+        "2": "adl6_2",
+        "3": "adl6_3",
+        "4": "adl6_4"
+      }
+    },
+    "adl7": {
+      "m3blaze_type": "single_select",
+      "label": "(7)手続",
+      "options": {
+        "1": "adl7_1",
+        "2": "adl7_2",
+        "3": "adl7_3",
+        "4": "adl7_4"
+      }
+    },
+    "adl8": {
+      "m3blaze_type": "single_select",
+      "label": "(8)趣味",
+      "options": {
+        "1": "adl8_1",
+        "2": "adl8_2",
+        "3": "adl8_3",
+        "4": "adl8_4"
+      }
+    },
+    "med_need": {
+      "m3blaze_type": "single_select",
+      "label": "服薬要否",
+      "options": {
+        "要": "med_yes",
+        "不要": "med_no"
+      }
+    },
+    "adl_change": {
+      "m3blaze_type": "single_select",
+      "label": "前回比較",
+      "options": {
+        "改善": "chg_imp",
+        "不変": "chg_same",
+        "悪化": "chg_worse",
+        "不明": "chg_unk"
+      }
+    },
+    "adl_grade": {
+      "m3blaze_type": "single_select",
+      "label": "生活能力程度",
+      "options": {
+        "1": "grade_1",
+        "2": "grade_2",
+        "3": "grade_3",
+        "4": "grade_4",
+        "5": "grade_5"
+      }
+    },
+    "welfare": {
+      "m3blaze_type": "single_select",
+      "label": "生活保護",
+      "options": {
+        "有": "welf_yes",
+        "無": "welf_no"
+      }
+    },
+    "svc_items": {
+      "m3blaze_type": "multi_select",
+      "label": "⑧サービス",
+      "options": {
+        "①自立訓練": "svc_c1",
+        "②共同生活援助": "svc_c2",
+        "③居宅介護": "svc_c3",
+        "④その他": "svc_c4",
+        "⑤訪問看護": "svc_c5",
+        "⑥訪問指導": "svc_c6",
+        "⑦デイケア": "svc_c7"
+      }
+    }
+  },
+  "text_fields": {
+    "furigana": {
+      "label": "furigana"
+    },
+    "patient_name": {
+      "label": "patient_name"
+    },
+    "birth_y": {
+      "label": "birth_y"
+    },
+    "birth_m": {
+      "label": "birth_m"
+    },
+    "birth_d": {
+      "label": "birth_d"
+    },
+    "age": {
+      "label": "age"
+    },
+    "address": {
+      "label": "address"
+    },
+    "dx_main": {
+      "label": "dx_main"
+    },
+    "icd_main": {
+      "label": "icd_main"
+    },
+    "dx_sub": {
+      "label": "dx_sub"
+    },
+    "icd_sub": {
+      "label": "icd_sub"
+    },
+    "dx_body": {
+      "label": "dx_body"
+    },
+    "body_type": {
+      "label": "body_type"
+    },
+    "onset_y": {
+      "label": "onset_y"
+    },
+    "onset_m": {
+      "label": "onset_m"
+    },
+    "hx": {
+      "label": "hx"
+    },
+    "organic_dx": {
+      "label": "organic_dx"
+    },
+    "organic_y": {
+      "label": "organic_y"
+    },
+    "organic_m": {
+      "label": "organic_m"
+    },
+    "organic_d": {
+      "label": "organic_d"
+    },
+    "first_y": {
+      "label": "first_y"
+    },
+    "first_m": {
+      "label": "first_m"
+    },
+    "first_d": {
+      "label": "first_d"
+    },
+    "hosp_fy": {
+      "label": "hosp_fy"
+    },
+    "hosp_fm": {
+      "label": "hosp_fm"
+    },
+    "hosp_fd": {
+      "label": "hosp_fd"
+    },
+    "tx_hosp1": {
+      "label": "tx_hosp1"
+    },
+    "tx_hosp2": {
+      "label": "tx_hosp2"
+    },
+    "tx_hosp3": {
+      "label": "tx_hosp3"
+    },
+    "tx_hosp4": {
+      "label": "tx_hosp4"
+    },
+    "tx_hosp5": {
+      "label": "tx_hosp5"
+    },
+    "tx_hosp6": {
+      "label": "tx_hosp6"
+    },
+    "dep_other": {
+      "label": "dep_other"
+    },
+    "manic_other": {
+      "label": "manic_other"
+    },
+    "halluc_other": {
+      "label": "halluc_other"
+    },
+    "excite_other": {
+      "label": "excite_other"
+    },
+    "res_other": {
+      "label": "res_other"
+    },
+    "behav_other": {
+      "label": "behav_other"
+    },
+    "anx_other": {
+      "label": "anx_other"
+    },
+    "epi_freq_m": {
+      "label": "epi_freq_m"
+    },
+    "epi_freq_y": {
+      "label": "epi_freq_y"
+    },
+    "epi_last_y": {
+      "label": "epi_last_y"
+    },
+    "epi_last_m": {
+      "label": "epi_last_m"
+    },
+    "epi_last_d": {
+      "label": "epi_last_d"
+    },
+    "epi_other": {
+      "label": "epi_other"
+    },
+    "subst_other": {
+      "label": "subst_other"
+    },
+    "subst_from_y": {
+      "label": "subst_from_y"
+    },
+    "subst_from_m": {
+      "label": "subst_from_m"
+    },
+    "sbc_other": {
+      "label": "sbc_other"
+    },
+    "ryoiku_grade": {
+      "label": "ryoiku_grade"
+    },
+    "memory_other": {
+      "label": "memory_other"
+    },
+    "learn_other": {
+      "label": "learn_other"
+    },
+    "cognitive_other": {
+      "label": "cognitive_other"
+    },
+    "pdd_other": {
+      "label": "pdd_other"
+    },
+    "other_sx": {
+      "label": "other_sx"
+    },
+    "sx_detail": {
+      "label": "sx_detail"
+    },
+    "lab_findings": {
+      "label": "lab_findings"
+    },
+    "facility": {
+      "label": "facility"
+    },
+    "living_other": {
+      "label": "living_other"
+    },
+    "adl_detail": {
+      "label": "adl_detail"
+    },
+    "svc1_w": {
+      "label": "svc1_w"
+    },
+    "svc1_m": {
+      "label": "svc1_m"
+    },
+    "svc3_w": {
+      "label": "svc3_w"
+    },
+    "svc3_m": {
+      "label": "svc3_m"
+    },
+    "svc4_name": {
+      "label": "svc4_name"
+    },
+    "svc4_w": {
+      "label": "svc4_w"
+    },
+    "svc4_m": {
+      "label": "svc4_m"
+    },
+    "svc5_w": {
+      "label": "svc5_w"
+    },
+    "svc5_m": {
+      "label": "svc5_m"
+    },
+    "svc6_w": {
+      "label": "svc6_w"
+    },
+    "svc6_m": {
+      "label": "svc6_m"
+    },
+    "svc7_w": {
+      "label": "svc7_w"
+    },
+    "svc7_m": {
+      "label": "svc7_m"
+    },
+    "svc_misc": {
+      "label": "svc_misc"
+    },
+    "remarks": {
+      "label": "remarks"
+    },
+    "diag_y": {
+      "label": "diag_y"
+    },
+    "diag_m": {
+      "label": "diag_m"
+    },
+    "diag_d": {
+      "label": "diag_d"
+    },
+    "hosp_addr": {
+      "label": "hosp_addr"
+    },
+    "dept": {
+      "label": "dept"
+    },
+    "hosp_name": {
+      "label": "hosp_name"
+    },
+    "dr_name": {
+      "label": "dr_name"
+    },
+    "phone": {
+      "label": "phone"
+    },
+    "tx_plan": {
+      "label": "tx_plan"
+    },
+    "tx_from1": {
+      "label": "tx_from1"
+    },
+    "tx_to1": {
+      "label": "tx_to1"
+    },
+    "tx_from2": {
+      "label": "tx_from2"
+    },
+    "tx_to2": {
+      "label": "tx_to2"
+    },
+    "tx_from3": {
+      "label": "tx_from3"
+    },
+    "tx_to3": {
+      "label": "tx_to3"
+    },
+    "tx_from4": {
+      "label": "tx_from4"
+    },
+    "tx_to4": {
+      "label": "tx_to4"
+    },
+    "tx_from5": {
+      "label": "tx_from5"
+    },
+    "tx_to5": {
+      "label": "tx_to5"
+    },
+    "tx_from6": {
+      "label": "tx_from6"
+    },
+    "tx_to6": {
+      "label": "tx_to6"
+    }
+  },
+  "checkboxes": {
+    "sev_yes": {
+      "label": "判定される"
+    },
+    "sev_no": {
+      "label": "判定されない"
+    },
+    "dr_shitei": {
+      "label": "精神保健指定医"
+    },
+    "dr_3yr": {
+      "label": "3年以上精神医療従事"
+    }
+  },
+  "standalone_toggles": {
+    "other_12": "(12)その他"
+  }
+}

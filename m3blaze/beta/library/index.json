@@ -1,0 +1,23 @@
+{
+  "channel": "beta",
+  "extension_version": "1.2.0",
+  "counts": {
+    "snippets": 1,
+    "pdf_templates": 1,
+    "files": 3
+  },
+  "files": [
+    {
+      "path": "pdf/shindan_osaka.field_mapping.json",
+      "size": 15983
+    },
+    {
+      "path": "pdf/shindan_osaka.pdf",
+      "size": 648845
+    },
+    {
+      "path": "snippets/sample-snippets.json",
+      "size": 6787
+    }
+  ]
+}
