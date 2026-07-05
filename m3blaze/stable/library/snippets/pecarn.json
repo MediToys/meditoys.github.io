@@ -1,7 +1,0 @@
-[
-  {
-    "trigger": ";pecarn",
-    "title": "PECARN 小児頭部外傷CT適応ルール",
-    "body": "**PECARN 小児頭部外傷 CT適応ルール**　{today}　{patient}（{id}）{age}\n{note}適応：受傷24時間以内・GCS14-15の軽症頭部外傷。ciTBI（臨床的に重要な外傷性脳損傷）を除外し不要なCT被曝を避けるためのルール。2歳未満と2歳以上で予測因子が異なる。{endnote}\n\n年齢群：{s:age_grp#年齢群[<2歳|≥2歳]=≥2歳}\n\n{section:高リスク所見（1つでも該当 → CT推奨）}\n{c:ams#GCS≤14 または意識状態の変化（傾眠・興奮・反応緩慢・繰り返す質問・医師判断で緩慢）}\n{c:skull_palpable#【<2歳】触知可能な頭蓋骨骨折}\n{c:basilar#【≥2歳】頭蓋底骨折の徴候（髄液鼻漏/耳漏・鼓室血腫・Battle徴候・Raccoon eyes）}\n\n{section:中等リスク所見（<2歳）}\n{c:hematoma#後頭部・頭頂部・側頭部の頭皮血腫（前頭部のみは除く）}\n{c:loc5#意識消失 ≥5秒}\n{c:abnormal#保護者から見て普段と様子が違う}\n\n{section:中等リスク所見（≥2歳）}\n{c:loc#意識消失あり（持続時間問わず）}\n{c:vomit#嘔吐}\n{c:headache#高度の頭痛}\n\n{section:共通の中等リスク所見}\n{note}重症受傷機転：自動車事故（車外放出・同乗者死亡・横転）／ヘルメットなしの歩行者・自転車が自動車に衝突／転落（<2歳は0.9m超、≥2歳は1.5m超）／高衝撃の物体による受傷{endnote}\n{c:mech#重症受傷機転}\n\n判定：{=rec: (ams || (age_grp==\"<2歳\" ? skull_palpable : basilar)) ? \"★CT撮影を推奨（ciTBIリスク 約4%）\" : ((age_grp==\"<2歳\" ? (hematoma||loc5||mech||abnormal) : (loc||vomit||mech||headache))) ? \"△CTか経過観察を選択（該当所見が複数・症状進行・生後3ヶ月未満・保護者希望などがあればCTを考慮。ciTBIリスク 約0.9%）\" : \"○CTは推奨されない（ciTBIリスク <0.05%、外来経過観察で可）\"}"
-  }
-]
