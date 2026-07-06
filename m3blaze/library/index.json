@@ -1,6 +1,6 @@
 {
   "channel": "shared",
-  "extension_version": "1.3.3",
+  "extension_version": "1.3.4",
   "counts": {
     "snippets": 2,
     "pdf_templates": 1,
@@ -9,19 +9,23 @@
   "files": [
     {
       "path": "pdf/shindan_osaka.field_mapping.json",
-      "size": 15983
+      "size": 15983,
+      "sha": "c33f210b4fc26bb1"
     },
     {
       "path": "pdf/shindan_osaka.pdf",
-      "size": 648845
+      "size": 648845,
+      "sha": "431a128eb5166d59"
     },
     {
       "path": "snippets/pecarn.json",
-      "size": 2069
+      "size": 2069,
+      "sha": "e6c9e571f46e8005"
     },
     {
       "path": "snippets/sample-snippets.json",
-      "size": 6787
+      "size": 6787,
+      "sha": "d61c40fbd3101506"
     }
   ]
 }
