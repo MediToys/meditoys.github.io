@@ -1,4 +1,5 @@
 {
-  "version": "1.0.6",
-  "setup_url": "https://meditoys.github.io/tools/MediToysReceiptServer-Setup.exe"
+  "version": "1.0.7",
+  "setup_url": "https://meditoys.github.io/tools/MediToysReceiptServer-Setup.exe",
+  "mac_url": "https://meditoys.github.io/tools/MediToysReceiptServer-mac.zip"
 }
