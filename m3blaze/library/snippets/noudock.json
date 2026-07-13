@@ -1,0 +1,82 @@
+[
+  {
+    "trigger": ";nd_uketsuke",
+    "title": "脳ドック 受付・基本情報",
+    "body": "【脳ドック受付入力】　{today}\n検体番号：{f:kentai_no#検体番号}\n氏名：{patient}（{patient_kana}）　ID：{id}\n性別：{patient_sex}　生年月日：{patient_birth}　受診時年齢：{age}歳\n住所：{patient_addr}　TEL：{patient_tel}\n検査種別：{s:course#検査種別[脳ドック|簡易脳ドック|脳ドック＋一般検診]=脳ドック}\n受診年月日：{d:visit_date#受診日=today}",
+    "tags": [
+      "脳ドック",
+      "受付"
+    ]
+  },
+  {
+    "trigger": ";nd_mondan",
+    "title": "脳ドック 問診（既往歴・家族歴・生活習慣・自覚症状）",
+    "body": "【脳ドック問診】　{today}\n\n{section:①社会背景}\n職業：{f:job#職業}　管理職経験：{s:kanri#管理職経験[なし|あり]=なし}\n教育歴（小学校からの年数）：{n:edu_years#教育年数=0}年\n\n{section:②家族歴}\n{m:family_hx#家族歴[脳卒中|認知症|パーキンソン病|糖尿病|高血圧|心疾患|心房細動|精神疾患|膠原病]}\n長寿家系の最長寿命：{n:longevity#最長寿命=0}歳\n\n{section:③生活習慣}\n喫煙：{s:smoke#喫煙[吸わない|過去に喫煙|現在喫煙]=吸わない}（{n:smoke_bd#本/日=0}本 × {n:smoke_yr#年=0}年）\n飲酒：{s:alcohol#飲酒[ほとんど飲まない|1合/日未満|1〜3合|3合以上（大酒家）]=ほとんど飲まない}\n健康診断：{s:kenshin#健診受診[定期的に受ける|時々受ける|受けない]=定期的に受ける}\n社会活動：{s:social#社会活動[あり|なし]=あり}\n運動習慣：{s:exercise#運動習慣[発汗しない|月1回|週2回|週2〜3回|毎日]=月1回}\n\n{section:④既往歴}\n{m:past_hx#既往歴[脳卒中|高血圧|糖尿病|脂質異常症|心房細動|心疾患|腎疾患|認知症|精神疾患|パーキンソン病|悪性腫瘍|膠原病]}\n血圧コントロール：{s:bp_control#血圧管理[良好|不良|治療なし]=治療なし}\n病歴詳細：{t:hx_detail#病歴詳細}\n\n{section:⑤自覚症状}\n{m:symptoms#自覚症状[頭痛・頭重|物忘れ|耳鳴り・めまい|手足のしびれ|手足の脱力|舌のもつれ|歩行困難|眼痛|複視|関節痛|胸部絞扼感|肩こり|胃腸症状|易疲労感|不眠|意欲低下|集中力低下|気うつ気分|気疲れ]}",
+    "tags": [
+      "脳ドック",
+      "問診",
+      "既往歴",
+      "家族歴"
+    ]
+  },
+  {
+    "trigger": ";nd_kensa",
+    "title": "脳ドック 検査データ（身体計測・血液・尿・生理）",
+    "body": "【脳ドック検査データ】　{today}\n\n{section:①身体計測}\n{layout:grid-2}\n身長：{n:height#身長(cm)=0}\n体重：{n:weight#体重(kg)=0}\n腹囲：{n:waist#腹囲(cm)=0}\n体脂肪率：{n:bodyfat#体脂肪率(%)=0}\n{layout:end}\nBMI：{=bmi: height>0 ? round(weight/((height/100)**2),1) : 0}　メタボリック症候群：{s:metabo#メタボ判定[非該当|予備群|該当]=非該当}\n\n{section:②循環器}\n血圧：{n:bp_sys#収縮期=120}/{n:bp_dia#拡張期=80} mmHg（平均血圧 {=map: round((bp_sys+bp_dia*2)/3)}）\nBNP：{n:bnp#BNP(pg/mL)=0}　心電図：{s:ecg#心電図[異常なし|要経過観察|要精査]=異常なし}\n\n{section:③脂質・糖代謝}\n{layout:grid-2}\n総コレステロール：{n:tc#T-cho=0}\n中性脂肪：{n:tg#TG=0}\nHDL-C：{n:hdl#HDL=0}\nLDL-C：{n:ldl#LDL=0}\n{layout:end}\n血糖：{n:glu#血糖(mg/dL)=0}　HbA1c：{n:hba1c#HbA1c(%)=0}%\n\n{section:④血液・肝腎機能}\n{layout:grid-2}\nAST：{n:ast#AST=0}\nALT：{n:alt#ALT=0}\nγ-GTP：{n:ggtp#γGTP=0}\nCr：{n:cr#Cr=0}\nBUN：{n:bun#BUN=0}\n尿酸：{n:ua#UA=0}\nHb：{n:hb#Hb=0}\n血小板：{n:plt#Plt(万)=0}\n{layout:end}\neGFR：{n:egfr#eGFR=0}\n尿蛋白：{s:up#尿蛋白[（-）|（±）|（+）|（2+）以上]=（-）}　尿潜血：{s:uob#尿潜血[（-）|（±）|（+）|（2+）以上]=（-）}　尿糖：{s:ug#尿糖[（-）|（±）|（+）|（2+）以上]=（-）}\n\n{section:⑤聴力・眼科}\n聴力：{s:hearing#聴力[異常なし|所見あり]=異常なし}\n矯正視力：右 {n:va_r#右=0} / 左 {n:va_l#左=0}\n眼底 Scheie：H{s:scheie_h#ScheieH[0|1|2|3|4]=0} S{s:scheie_s#ScheieS[0|1|2|3|4]=0}　眼圧：右 {n:iop_r#右=0} / 左 {n:iop_l#左=0} mmHg",
+    "tags": [
+      "脳ドック",
+      "検査データ",
+      "採血"
+    ]
+  },
+  {
+    "trigger": ";nd_keibu",
+    "title": "脳ドック 頚部血管超音波",
+    "body": "【頚部血管超音波】　{today}\n\n{section:①IMT・狭窄}\nIMT：右 {n:imt_r#右IMT(mm)=0} / 左 {n:imt_l#左IMT(mm)=0} mm\n最大内中膜厚（max IMT）：{n:imt_max#max IMT(mm)=0} mm\n狭窄度：{n:stenosis#狭窄度(%)=0}%（{s:steno_method#測定法[NASCET|ECST]=NASCET}）\n動脈硬化度：{s:sclerosis#動脈硬化度[0:正常|1:軽度狭窄|2:中等度狭窄|3:高度狭窄|4:閉塞]=0:正常}\n\n{section:②プラーク}\nプラーク：{s:plaque#プラーク[なし|あり（1.1mm以上の隆起）]=なし}\n性状：{s:plaque_char#プラーク性状[0:低輝度|1:等輝度|2:高輝度|3:潰瘍形成]=1:等輝度}\n所見：{t:us_finding#頚部エコー所見}\n\n{section:③血圧脈波（ABI/baPWV）}\nbaPWV：右 {n:pwv_r#右=0} / 左 {n:pwv_l#左=0}\nABI：右 {n:abi_r#右=0} / 左 {n:abi_l#左=0}\n{note}ABI：0.9〜1.3 正常 / ≦0.9 閉塞の疑い / ≧1.3 動脈石灰化{endnote}\n判定：{s:us_hantei#判定[異常なし|要経過観察|要精査]=異常なし}",
+    "tags": [
+      "脳ドック",
+      "頚部エコー",
+      "頚動脈"
+    ]
+  },
+  {
+    "trigger": ";nd_mri",
+    "title": "脳ドック MRI/MRA所見",
+    "body": "【MRI/MRA所見】　{today}\n\n{section:①脳実質}\n脳萎縮：{s:atrophy#脳萎縮[なし|あり|疑い]=なし}\n脳梗塞：{s:infarct#脳梗塞[なし|あり]=なし}（大きさ：{s:infarct_size#大きさ[ラクナ(≦15mm)|1/3未満|1/3以上|全域]=ラクナ(≦15mm)}）\n\n{section:②白質病変・微小出血}\n{note}PVH/DSWMH は Shinohara分類 Grade0〜4{endnote}\n脳室周囲高信号（PVH）：{s:pvh#PVH[Grade0|Grade1|Grade2|Grade3|Grade4]=Grade0}\n深部皮質下白質病変（DSWMH）：{s:dswmh#DSWMH[Grade0|Grade1|Grade2|Grade3|Grade4]=Grade0}\n血管周囲腔拡大（基底核）：{s:evr_bg#基底核[Grade0|Grade1|Grade2|Grade3]=Grade0}\n血管周囲腔拡大（皮質境界下）：{s:evr_sc#皮質下[Grade0|Grade1|Grade2|Grade3|Grade4]=Grade0}\n脳微小出血（CMBs）：{s:cmb#CMBs[なし|あり]=なし}（分布：{s:cmb_dist#分布パターン[深部限局型|脳葉限局型|混合型|その他]=深部限局型}）\n\n{section:③MRA所見}\n未破裂脳動脈瘤：{s:aneurysm#動脈瘤[なし|あり|疑い]=なし}（部位・径：{f:aneurysm_detail#瘤詳細}）\n頭蓋内主幹動脈狭窄：{s:ica_steno#頭蓋内狭窄[なし|軽度(<50%)|中等度(50-70%)|高度(≧70%)|閉塞]=なし}\n頭蓋外血管狭窄：{s:eca_steno#頭蓋外狭窄[なし|あり]=なし}\n\n{section:④総合所見}\nMRI所見：{t:mri_finding#MRI所見}\nMRA所見：{t:mra_finding#MRA所見}\n判定：{s:mri_hantei#判定[異常なし|要経過観察|要精査]=異常なし}",
+    "tags": [
+      "脳ドック",
+      "MRI",
+      "MRA"
+    ]
+  },
+  {
+    "trigger": ";nd_ninchi",
+    "title": "脳ドック 認知機能検査（スコアまとめ）",
+    "body": "【認知機能検査】　{today}\n\n{section:①スクリーニング}\nMMSE：{n:mmse#MMSE(/30)=30}（{=mmse_j: mmse>=27?\"正常\":mmse>=22?\"軽度認知障害の疑い\":\"認知症の疑い\"}）\nHDS-R：{n:hdsr#HDS-R(/30)=30}（{=hdsr_j: hdsr>=21?\"正常\":\"認知症の疑い\"}）\nCADi2：{n:cadi#CADi2点数=0}　所要 {n:cadi_sec#秒=0}秒\n\n{section:②気分・意欲}\nSDS（うつ）：{n:sds#SDS=0}（{=sds_j: sds>=40?\"うつ状態\":\"正常範囲\"}）\nやる気スコア（Apathy）：{n:apathy#やる気スコア=0}（{=apathy_j: apathy>=16?\"アパシーあり\":\"正常\"}）\nJSS-DE：{n:jssde#JSS-DE=0}\n\n{section:③前頭葉・その他}\nFAB：{n:fab#FAB(/18)=18}\nStroop（Part2−Part1）：{n:stroop#Stroop差(秒)=0}（{=stroop_j: stroop>=40?\"異常\":\"正常\"}）\nかなひろいテスト：正答 {n:kana#正答数=0}\nWCST 達成カテゴリー：{n:wcst#WCST達成=0}\n所見：{t:cog_finding#認知機能所見}",
+    "tags": [
+      "脳ドック",
+      "認知機能",
+      "MMSE"
+    ]
+  },
+  {
+    "trigger": ";nd_yosoku",
+    "title": "脳ドック 認知機能低下 早期予測スコア",
+    "body": "**認知機能低下 早期予測スコア**　{today}\n{note}9点以上で将来の認知症リスクが高い（生活習慣病治療・社会活動/運動等の改善が必須）。認知機能は複数実施時は点数の高い方を使用{endnote}\n\n＜画像検査危険因子＞\n脳梗塞：{s:y_infarct#脳梗塞[なし|あり]=なし}\n大脳白質病変（PVH含む）：{s:y_wml#白質病変[0〜2度|3〜4度]=0〜2度}\n微小脳出血：{s:y_cmb#微小脳出血[なし|あり]=なし}\n頚動脈プラーク：{s:y_plaque#頚動脈プラーク[なし|あり]=なし}\n\n＜生活習慣病危険因子＞\n高血圧：{s:y_ht#高血圧[なし|あり]=なし}\n糖尿病：{s:y_dm#糖尿病[なし|あり]=なし}\n喫煙：{s:y_smoke#喫煙[なし・禁煙|現在喫煙中]=なし・禁煙}\n\n＜意欲・認知機能＞\n意欲評価（やる気スコア）：{s:y_apathy#やる気スコア[15以下|16以上]=15以下}\n認知機能（長谷川/MMSE/CADi2等）：{s:y_cog#認知機能[満点|90%以上|90%未満]=満点}\n\n＜認知促進因子＞\n社会活動習慣：{s:y_social#社会活動[あり|なし]=あり}\n運動習慣：{s:y_exercise#運動習慣[あり|なし]=あり}\n教育歴：{s:y_edu#教育歴[16年以上|10〜15年|9年以下]=10〜15年}\n年齢：{s:y_age#年齢[49歳以下|50〜59歳|60歳以上]=50〜59歳}\n\n合計：{=y_total: (y_infarct==\"あり\"?2:0)+(y_wml==\"3〜4度\"?2:0)+(y_cmb==\"あり\"?2:0)+(y_plaque==\"あり\"?1:0)+(y_ht==\"あり\"?2:0)+(y_dm==\"あり\"?2:0)+(y_smoke==\"現在喫煙中\"?1:0)+(y_apathy==\"16以上\"?2:0)+(y_cog==\"満点\"?0:y_cog==\"90%以上\"?1:2)+(y_social==\"なし\"?1:-1)+(y_exercise==\"なし\"?1:-1)+(y_edu==\"16年以上\"?-1:y_edu==\"9年以下\"?1:0)+(y_age==\"60歳以上\"?1:y_age==\"49歳以下\"?-1:0)}点 / 20点\n判定：{=y_judge: y_total>=9?\"高リスク（要生活習慣改善・経過観察）\":\"リスク低め（経過観察）\"}",
+    "tags": [
+      "脳ドック",
+      "認知機能",
+      "予測スコア"
+    ]
+  },
+  {
+    "trigger": ";nd_report",
+    "title": "脳ドック 総合判定・報告書",
+    "body": "**脳ドック健診結果 総合判定**　{today}\n{patient}　ID：{id}　{age}歳　{patient_sex}\n\n【判定区分】{s:overall#総合判定[A:異常なし|B:軽度異常|C:要経過観察|D:要精査|E:要治療]=A:異常なし}\n\n【各所見まとめ】\nMRI/MRA：{f:sum_mri#MRI/MRA}\n頚部エコー：{f:sum_us#頚部エコー}\n血液・代謝：{f:sum_lab#血液・代謝}\n認知機能：{f:sum_cog#認知機能}\n\n【指導事項・総合コメント】\n{t:advice#指導事項}\n\n【紹介状】{s:referral#紹介状[なし|あり]=なし}（紹介先：{f:referral_to#紹介先}）\n担当医：{doctor_name}",
+    "tags": [
+      "脳ドック",
+      "報告書",
+      "総合判定"
+    ]
+  }
+]
