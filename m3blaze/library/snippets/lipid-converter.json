@@ -1,0 +1,8 @@
+[
+  {
+    "trigger": ";lipid",
+    "title": "脂質パネル 相互換算（Friedewald）",
+    "body": "【脂質パネル 相互換算】{today}\n{note}3項目を入力すると残り1項目を自動補完（Friedewald法：LDL＝TC−HDL−TG/5、VLDL≈TG/5）。TGの逆算のみ 5×(TC−HDL−LDL)。TG≧400 mg/dL や 検体が乳び のときは Friedewald 法は不正確なため直接法を優先。{endnote}\n入力：TG {n:tg#TG} ／ HDL {n:hdl#HDL} ／ LDL {n:ldl#LDL} ／ T-Chol {n:tchol#T-Chol}（測定した3項目を入力）\n──────── 補完後 ────────\nTG    ：{=round(coalesce(tg, 5*(tchol - hdl - ldl)))} mg/dL　※基準値 50〜149\nHDL   ：{=round(coalesce(hdl, tchol - ldl - tg/5))} mg/dL　※基準値 40以上（男性）・50以上（女性）\nLDL   ：{=round(coalesce(ldl, tchol - hdl - tg/5))} mg/dL　※基準値 60〜119\nT-Chol：{=round(coalesce(tchol, ldl + hdl + tg/5))} mg/dL　※基準値 140〜199\nnon-HDL-C：{=round(coalesce(tchol, ldl + hdl + tg/5) - coalesce(hdl, tchol - ldl - tg/5))} mg/dL　※基準値 90〜149",
+    "tags": ["脂質", "検査", "換算", "Friedewald"]
+  }
+]

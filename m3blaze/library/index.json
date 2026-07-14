@@ -1,10 +1,10 @@
 {
   "channel": "shared",
-  "extension_version": "1.3.4",
+  "extension_version": "1.4.0",
   "counts": {
-    "snippets": 3,
+    "snippets": 7,
     "pdf_templates": 1,
-    "files": 5
+    "files": 9
   },
   "files": [
     {
@@ -16,6 +16,26 @@
       "path": "pdf/shindan_osaka.pdf",
       "size": 648845,
       "sha": "431a128eb5166d59"
+    },
+    {
+      "path": "snippets/design.json",
+      "size": 2460,
+      "sha": "d7cebcc58b01746b"
+    },
+    {
+      "path": "snippets/hdsr.json",
+      "size": 2925,
+      "sha": "da2228c967a8961f"
+    },
+    {
+      "path": "snippets/lipid-converter.json",
+      "size": 1169,
+      "sha": "09b897689fe398de"
+    },
+    {
+      "path": "snippets/mmse.json",
+      "size": 2847,
+      "sha": "886a4c4fe3c99f21"
     },
     {
       "path": "snippets/noudock.json",
