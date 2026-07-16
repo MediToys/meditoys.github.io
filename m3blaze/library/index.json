@@ -2,9 +2,9 @@
   "channel": "shared",
   "extension_version": "1.4.0",
   "counts": {
-    "snippets": 7,
+    "snippets": 12,
     "pdf_templates": 1,
-    "files": 9
+    "files": 14
   },
   "files": [
     {
@@ -36,6 +36,31 @@
       "path": "snippets/mmse.json",
       "size": 2847,
       "sha": "886a4c4fe3c99f21"
+    },
+    {
+      "path": "snippets/neuro-adl-function.json",
+      "size": 12382,
+      "sha": "8a8d7517b91599f3"
+    },
+    {
+      "path": "snippets/neuro-consciousness.json",
+      "size": 5128,
+      "sha": "524a71abe49b5487"
+    },
+    {
+      "path": "snippets/neuro-stroke-hemorrhage.json",
+      "size": 7153,
+      "sha": "e3899e9f229b60f0"
+    },
+    {
+      "path": "snippets/neuro-tumor-other.json",
+      "size": 11150,
+      "sha": "fecd469aad31485c"
+    },
+    {
+      "path": "snippets/neuro-vascular.json",
+      "size": 10936,
+      "sha": "144afe705b83c20b"
     },
     {
       "path": "snippets/noudock.json",

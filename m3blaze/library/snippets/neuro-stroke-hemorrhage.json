@@ -1,0 +1,37 @@
+[
+  {
+    "trigger": ";mnihss",
+    "title": "Modified NIHSS 2001（自動計算・31点満点）",
+    "body": "{note}Modified NIH Stroke Scale（mNIHSS, Lyden 2001）。旧NIHSSから1a・4・7・10を除き感覚等を簡略化した11項目版。合計0〜31点{endnote}\n**Modified NIHSS（mNIHSS 2001）**　{today}\n{note}1b 意識質問（今月の月名・年齢）：0=2問正答 / 1=1問正答 / 2=2問誤答{endnote}\n1b.意識質問：{s:q1b#意識質問[0|1|2]=0}\n{note}1c 従命（開閉眼・離握手）：0=両方正確 / 1=片方正確 / 2=いずれも不可{endnote}\n1c.従命：{s:q1c#従命[0|1|2]=0}\n{note}2 注視（左右への眼球運動）：0=正常 / 1=部分的注視麻痺 / 2=完全注視麻痺{endnote}\n2.注視：{s:q2#注視[0|1|2]=0}\n{note}3 視野（四分視野）：0=欠損なし / 1=部分的半盲 / 2=完全半盲 / 3=両側性半盲{endnote}\n3.視野：{s:q3#視野[0|1|2|3]=0}\n{note}5a 左腕（10秒挙上、座位90°臥位45°）：0=保持 / 1=10秒以内に下垂 / 2=重力に抗すが10秒以内に落下 / 3=重力に抗せず / 4=動きなし{endnote}\n5a.左腕：{s:q5a#左腕[0|1|2|3|4]=0}\n{note}5b 右腕：5aと同基準{endnote}\n5b.右腕：{s:q5b#右腕[0|1|2|3|4]=0}\n{note}6a 左脚（5秒挙上、臥位30°）：0=保持 / 1=5秒以内に下垂 / 2=重力に抗すが5秒以内に落下 / 3=重力に抗せず / 4=動きなし{endnote}\n6a.左脚：{s:q6a#左脚[0|1|2|3|4]=0}\n{note}6b 右脚：6aと同基準{endnote}\n6b.右脚：{s:q6b#右脚[0|1|2|3|4]=0}\n{note}8 感覚（四肢近位部にpin刺激）：0=正常 / 1=異常{endnote}\n8.感覚：{s:q8#感覚[0|1]=0}\n{note}9 言語（呼称・文章読み）：0=正常 / 1=軽度の失語 / 2=高度の失語 / 3=無言または全失語{endnote}\n9.言語：{s:q9#言語[0|1|2|3]=0}\n{note}11 無視（両側同時刺激・視覚刺激）：0=正常 / 1=軽度の無視 / 2=高度の無視{endnote}\n11.無視：{s:q11#無視[0|1|2]=0}\n合計：{=total: q1b+q1c+q2+q3+q5a+q5b+q6a+q6b+q8+q9+q11}/31点"
+  },
+  {
+    "trigger": ";hachinski",
+    "title": "Hachinski虚血スコア（自動計算）",
+    "body": "{note}Ischemic Score（Hachinski）。総得点7点以上=多発梗塞性認知症(MID)、4点以下=変性性（アルツハイマー型）認知症。●=Rosenらが特に重要と指摘した項目{endnote}\n**Ischemic Score（Hachinski）**　{today}\n{c:h1#●急激な発症}（2点）\n{c:h2#階段状悪化}（1点）\n{c:h3#動揺性の経過}（2点）\n{c:h4#夜間せん妄}（1点）\n{c:h5#人格の比較的保持}（1点）\n{c:h6#抑うつ状態}（1点）\n{c:h7#身体的愁訴}（1点）\n{c:h8#●情動失禁}（1点）\n{c:h9#●高血圧の既往}（1点）\n{c:h10#●卒中発作の既往}（2点）\n{c:h11#随伴した明らかな動脈硬化}（1点）\n{c:h12#●局所神経症状}（2点）\n{c:h13#●局所神経徴候}（2点）\n合計：{=total: (h1?2:0)+(h2?1:0)+(h3?2:0)+(h4?1:0)+(h5?1:0)+(h6?1:0)+(h7?1:0)+(h8?1:0)+(h9?1:0)+(h10?2:0)+(h11?1:0)+(h12?2:0)+(h13?2:0)}/18点\n判定：{=interp: total>=7 ? \"多発梗塞性認知症（MID）が示唆される（7点以上）\" : total<=4 ? \"変性性（アルツハイマー型）認知症が示唆される（4点以下）\" : \"境界域（5〜6点）\"}"
+  },
+  {
+    "trigger": ";fisher",
+    "title": "FisherのCT分類（SAH）",
+    "body": "{note}FisherのCT分類（くも膜下出血のCT所見による分類）{endnote}\n**FisherのCT分類（SAH）**　{today}\nGroup：{s:fisher#Group[Group 1|Group 2|Group 3|Group 4]=Group 1}\n判定：{=interp: fisher==\"Group 1\" ? \"Group 1：くも膜下出血を認めない\" : fisher==\"Group 2\" ? \"Group 2：びまん性の薄いくも膜下出血（血腫なし、厚さ1mm未満の垂直層）\" : fisher==\"Group 3\" ? \"Group 3：限局した血腫、または厚さ1mm以上の垂直層（大脳半球間裂・島槽・迂回槽）\" : \"Group 4：脳内および/または脳室内出血（有意なテント上SAHは伴わない）\"}"
+  },
+  {
+    "trigger": ";ich_grading",
+    "title": "脳内出血 Neurological Grading（金谷）",
+    "body": "{note}脳内出血の神経学的重症度分類（金谷ら）。3-3-9度方式（JCS）と対応{endnote}\n**脳内出血 Neurological Grading（金谷）**　{today}\nGrade：{s:ich#Grade[1|2|3|4a|4b|5]=1}\n判定：{=interp: ich==\"1\" ? \"Grade 1：alertness or confusion（JCS 0〜I）\" : ich==\"2\" ? \"Grade 2：somnolence（JCS II-1）\" : ich==\"3\" ? \"Grade 3：stupor（JCS II-2, 3）\" : ich==\"4a\" ? \"Grade 4a：semicoma、ヘルニア徴候なし（JCS III-1）\" : ich==\"4b\" ? \"Grade 4b：semicoma、ヘルニア徴候あり（JCS III-2）\" : \"Grade 5：deep coma（JCS III-3）\"}"
+  },
+  {
+    "trigger": ";putaminal",
+    "title": "被殻出血 CT分類（金谷）",
+    "body": "{note}被殻出血のCT分類（金谷ら）。I.C.=内包、V=脳室内出血の合併{endnote}\n**被殻出血 CT分類**　{today}\nType：{s:put#Type[I|IIa|IIb|IIIa|IIIb|IVa|IVb|Va|Vb]=I}\n判定：{=interp: put==\"I\" ? \"I：内包の外側に限局\" : put==\"IIa\" ? \"IIa：内包前脚へ進展\" : put==\"IIb\" ? \"IIb：内包前脚へ進展＋脳室内出血\" : put==\"IIIa\" ? \"IIIa：内包後脚へ進展\" : put==\"IIIb\" ? \"IIIb：内包後脚へ進展＋脳室内出血\" : put==\"IVa\" ? \"IVa：内包前脚・後脚へ進展\" : put==\"IVb\" ? \"IVb：内包前脚・後脚へ進展＋脳室内出血\" : put==\"Va\" ? \"Va：視床・視床下部へ進展\" : \"Vb：視床・視床下部へ進展＋脳室内出血\"}"
+  },
+  {
+    "trigger": ";thalamic",
+    "title": "視床出血 CT分類（金谷）",
+    "body": "{note}視床出血のCT分類（金谷ら）。V=脳室内出血の合併{endnote}\n**視床出血 CT分類**　{today}\nType：{s:thal#Type[Ia|Ib|IIa|IIb|IIIa|IIIb]=Ia}\n判定：{=interp: thal==\"Ia\" ? \"Ia：視床に限局、脳室内出血なし\" : thal==\"Ib\" ? \"Ib：視床に限局＋脳室内出血\" : thal==\"IIa\" ? \"IIa：内包へ進展、脳室内出血なし\" : thal==\"IIb\" ? \"IIb：内包へ進展＋脳室内出血\" : thal==\"IIIa\" ? \"IIIa：視床下部・中脳へ進展、脳室内出血なし\" : \"IIIb：視床下部・中脳へ進展＋脳室内出血\"}"
+  },
+  {
+    "trigger": ";scheie",
+    "title": "網膜細動脈硬化の分類（Scheie）",
+    "body": "{note}網膜細動脈硬化の分類（Scheie）。動静脈交叉現象・銀線動脈で評価{endnote}\n**網膜細動脈硬化の分類（Scheie）**　{today}\n度：{s:scheie#度[第1度|第2度|第3度|第4度]=第1度}\n判定：{=interp: scheie==\"第1度\" ? \"第1度：交叉部で動脈の下を走る静脈が動脈に接する部で軽度に混濁、あるいはわずかに陥凹\" : scheie==\"第2度\" ? \"第2度：交叉部で明らかな変化があるが、静脈血柱が動脈壁に接する部で隠伏杜絶する現象はない\" : scheie==\"第3度\" ? \"第3度：交叉部で静脈血柱が隠伏杜絶し動脈壁に達しない\" : \"第4度：銀線動脈を認め、かつ第3度所見が一層著明\"}"
+  }
+]

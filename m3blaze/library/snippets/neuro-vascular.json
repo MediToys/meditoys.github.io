@@ -1,0 +1,67 @@
+[
+  {
+    "trigger": ";spetzler",
+    "title": "Spetzler-Martin AVM Grade（自動計算）",
+    "body": "{note}Spetzler-Martin AVM Grade = size + eloquence + venous drainage（1〜5）{endnote}\n**Spetzler-Martin AVM Grade**　{today}\nサイズ：{s:sm_size#サイズ[1|2|3]=1}\n{note}1:small(<3cm) / 2:medium(3〜6cm) / 3:large(>6cm){endnote}\n{c:sm_eloquent#eloquent（機能的重要部位に隣接）}\n{note}非eloquent=0点 / eloquent=1点{endnote}\n{c:sm_deep#深部静脈灌流あり}\n{note}superficial only=0点 / deep=1点{endnote}\nGrade：{=grade: sm_size + (sm_eloquent?1:0) + (sm_deep?1:0)}/5"
+  },
+  {
+    "trigger": ";ccf_barrow",
+    "title": "Dural AVM（CCF）分類（Barrow）",
+    "body": "{note}海綿静脈洞部dural AVM（頚動脈海綿静脈洞瘻 CCF）の分類（Barrow）。ICA:内頚動脈、ECA:外頚動脈、CS:海綿静脈洞{endnote}\n**Dural AVM（CCF）分類（Barrow）**　{today}\nType：{s:ccf#Type[A|B|C|D]=A}\n判定：{=interp: ccf==\"A\" ? \"Type A：ICAと海綿静脈洞（CS）の直接シャント\" : ccf==\"B\" ? \"Type B：ICAの硬膜枝とCSのdural shunt\" : ccf==\"C\" ? \"Type C：ECAの硬膜枝とCSのdural shunt\" : \"Type D：ICAおよびECA双方の硬膜枝とCSのdural shunt\"}"
+  },
+  {
+    "trigger": ";spinal_avm",
+    "title": "脊髄AVM（perimedullary AVF・Merland）",
+    "body": "{note}脊髄動静脈奇形（perimedullary AVF、Merland/Gueguen）。ASA:前脊髄動脈、PSA:後脊髄動脈{endnote}\n**脊髄AVM（perimedullary AVF, Merland）**　{today}\nType：{s:savm#Type[Type 1|Type 2|Type 3]=Type 1}\n判定：{=interp: savm==\"Type 1\" ? \"Type 1：single feeder（細いASA）、単一・小さいAVF、緩徐に上行する髄周囲静脈系\" : savm==\"Type 2\" ? \"Type 2：multiple feeders（拡張ASA・PSA）、多発・中等大AVF、緩徐に上行する髄周囲静脈系\" : \"Type 3：multiple feeders（拡張ASA・PSA）、単一・巨大AVF、巨大静脈拡張、急速なmetameric静脈灌流\"}"
+  },
+  {
+    "trigger": ";moyamoya_suzuki",
+    "title": "もやもや病 脳血管撮影6期分類（鈴木）",
+    "body": "{note}小児もやもや病における脳血管撮影像6期相の分類（鈴木）{endnote}\n**もやもや病 脳血管撮影6期分類（鈴木）**　{today}\n期：{s:suzuki#期[第1期|第2期|第3期|第4期|第5期|第6期]=第1期}\n判定：{=interp: suzuki==\"第1期\" ? \"第1期 carotid fork狭小期：carotid forkの狭小化のみで他に変化なし\" : suzuki==\"第2期\" ? \"第2期 moyamoya初発期（脳内主幹動脈拡張期）：脳内主幹動脈が拡張、carotid fork部にわずかにmoyamoya血管\" : suzuki==\"第3期\" ? \"第3期 moyamoya増勢期（中・前大脳動脈脱落）：basal moyamoya明瞭、中・前大脳動脈に欠損、外頚動脈系側副路出現\" : suzuki==\"第4期\" ? \"第4期 moyamoya細微期（後大脳動脈脱落）：後大脳動脈が消失、moyamoya血管が粗・細小化\" : suzuki==\"第5期\" ? \"第5期 moyamoya縮小期（内頚動脈系全主幹動脈消失）：範囲がサイフォン部に限局、外頚動脈側副路増加\" : \"第6期 moyamoya消失期（外頚動脈・椎骨動脈のみの血流保全）：内頚動脈サイフォン部消失、外頚・椎骨動脈からのみ血流保全\"}"
+  },
+  {
+    "trigger": ";yamashita_hemo",
+    "title": "脳主幹動脈閉塞 血行動態分類（山下）",
+    "body": "{note}脳主幹動脈閉塞症の血行動態分類（山下ら）。アセタゾラミド負荷Xe-CTによる評価{endnote}\n**脳主幹動脈閉塞 血行動態分類（山下）**　{today}\n群：{s:yh#群[I群|II群|III群|IV群]=I群}\n判定：{=interp: yh==\"I群\" ? \"I群（正常群）：基礎血流量・予備能ともに正常\" : yh==\"II群\" ? \"II群（予備能低下群）：基礎血流量は正常だが血流予備能が低下 → 血行再建術を考慮\" : yh==\"III群\" ? \"III群（matched low perfusion群）：基礎血流量は低下だが予備能は保たれる → 代謝改善薬・抗血小板薬\" : \"IV群（高度灌流圧低下群）：基礎血流量・予備能ともに低下 → 血行再建術\"}"
+  },
+  {
+    "trigger": ";steed",
+    "title": "内頚動脈閉塞試験 Steed分類",
+    "body": "{note}内頚動脈閉塞試験のためのSteed分類{endnote}\n**内頚動脈閉塞試験 Steed分類**　{today}\n群：{s:steed#群[1群|2群|3群|4群]=1群}\n判定：{=interp: steed==\"1群\" ? \"1群：内頚動脈閉塞後、血流量変化なし\" : steed==\"2群\" ? \"2群：血流量低下があるが30 ml/100g/min以上\" : steed==\"3群\" ? \"3群：閉塞後30 ml以下に低下\" : \"4群：閉塞時に症状が出現しキセノンCTができないもの\"}"
+  },
+  {
+    "trigger": ";mod_steed",
+    "title": "内頚動脈閉塞試験 modified Steed分類（山下）",
+    "body": "{note}内頚動脈閉塞試験のためのmodified Steed分類（山下）。予備能のある患者（1a・2a・3a）は急性永久遮断が可能{endnote}\n**内頚動脈閉塞試験 modified Steed分類（山下）**　{today}\n群：{s:msteed#群[1a|1b|2a|2b|3a|3b|4群]=1a}\n判定：{=interp: msteed==\"1a\" ? \"1群a：血流量変化なし、予備能あり（永久遮断可）\" : msteed==\"1b\" ? \"1群b：血流量変化なし、予備能なし\" : msteed==\"2a\" ? \"2群a：血流量低下があるも30 ml以上、予備能あり（永久遮断可）\" : msteed==\"2b\" ? \"2群b：血流量低下があるも30 ml以上、予備能なし\" : msteed==\"3a\" ? \"3群a：血流量30 ml以下、予備能あり（永久遮断可）\" : msteed==\"3b\" ? \"3群b：血流量30 ml以下、予備能なし\" : \"4群：マタス試験で症状が出現しキセノンCTができないもの\"}"
+  },
+  {
+    "trigger": ";davf_borden",
+    "title": "硬膜動静脈瘻 分類（Borden）",
+    "body": "{note}硬膜動静脈瘻（dural AVF）の分類（Borden）。皮質静脈への逆流の有無で分類{endnote}\n**Dural AVF分類（Borden）**　{today}\nType：{s:borden#Type[I|II|III]=I}\n判定：{=interp: borden==\"I\" ? \"Type I：硬膜静脈洞・硬膜静脈へ順行性に流出（皮質静脈逆流なし）。しばしば良性、自然寛解率が高い\" : borden==\"II\" ? \"Type II：硬膜静脈洞へ流出＋くも膜下静脈への逆流。進行性神経脱落・出血・頭蓋内圧亢進\" : \"Type III：くも膜下静脈へ直接流出（硬膜静脈洞を介さない）。進行性神経脱落・出血\"}"
+  },
+  {
+    "trigger": ";davf_cognard",
+    "title": "硬膜動静脈瘻 分類（Cognard）",
+    "body": "{note}硬膜動静脈瘻の分類（Cognard）{endnote}\n**Dural AVF分類（Cognard）**　{today}\nType：{s:cognard#Type[I|IIa|IIb|IIa+b|III|IV|V]=I}\n判定：{=interp: cognard==\"I\" ? \"Type I：静脈洞へ流出、正常な順行性血流\" : cognard==\"IIa\" ? \"Type IIa：静脈洞へ流出、静脈洞内への逆流のみ\" : cognard==\"IIb\" ? \"Type IIb：静脈洞へ流出、皮質静脈への逆流のみ\" : cognard==\"IIa+b\" ? \"Type IIa+b：静脈洞へ流出、静脈洞内および皮質静脈への逆流\" : cognard==\"III\" ? \"Type III：皮質静脈へ直接流出、静脈拡張なし\" : cognard==\"IV\" ? \"Type IV：皮質静脈へ流出＋静脈瘤様拡張（径>5mmかつ流出静脈径の3倍以上）\" : \"Type V：脊髄髄周囲静脈へ流出\"}"
+  },
+  {
+    "trigger": ";davf_djindjian",
+    "title": "硬膜動静脈瘻 分類（Djindjian）",
+    "body": "{note}硬膜動静脈瘻の分類（Djindjian）{endnote}\n**Dural AVF分類（Djindjian）**　{today}\nType：{s:dji#Type[I|II|III|IV]=I}\n判定：{=interp: dji==\"I\" ? \"Type I：静脈洞または硬膜静脈へ流出（最も頻度が高い）\" : dji==\"II\" ? \"Type II：静脈洞へ流出するが、静脈洞に流入する静脈への有意な逆流あり\" : dji==\"III\" ? \"Type III：皮質静脈へ流出（中枢神経症状を恒常的に生じる）\" : \"Type IV：大きなvenous lake（硬膜・硬膜下）を伴い頭蓋内占拠性病変として作用\"}"
+  },
+  {
+    "trigger": ";davf_lalwani",
+    "title": "硬膜動静脈瘻 分類（Lalwani）",
+    "body": "{note}硬膜動静脈瘻の分類（Lalwani）。横・S状静脈洞のDAVFにおける静脈うっ滞の重症度分類{endnote}\n**Dural AVF分類（Lalwani）**　{today}\nGrade：{s:lalwani#Grade[1|2|3|4]=1}\n判定：{=interp: lalwani==\"1\" ? \"Grade 1：静脈制限なし、正常な順行性静脈灌流（逆行性・皮質静脈灌流なし）\" : lalwani==\"2\" ? \"Grade 2：順行性＋逆行性静脈灌流（皮質静脈灌流の有無は問わない）\" : lalwani==\"3\" ? \"Grade 3：逆行性＋皮質静脈灌流（順行性なし）\" : \"Grade 4：皮質静脈灌流のみ\"}"
+  },
+  {
+    "trigger": ";cas_indication",
+    "title": "CASの適応基準",
+    "body": "{note}CASの適応基準。前提：外科的治療（CEA）が困難であること。標的血管径5〜9mm。①症候性（TIAまたは脳卒中）で総頚/内頚動脈に50%以上のアテローム性狭窄 ②無症候性で同80%以上の狭窄{endnote}\n**CAS適応基準**　{today}\n{c:cas_diam#標的血管径が5〜9mmである}\n症候：{s:cas_symptom#症候[症候性|無症候性]=症候性}\n狭窄率：{n:cas_stenosis#狭窄率（%）=50}\n判定：{=interp: cas_symptom==\"症候性\" ? (cas_stenosis>=50 ? \"症候性かつ狭窄50%以上：CAS適応の狭窄基準を満たす\" : \"症候性だが狭窄50%未満：狭窄基準を満たさない\") : (cas_stenosis>=80 ? \"無症候性かつ狭窄80%以上：CAS適応の狭窄基準を満たす\" : \"無症候性で狭窄80%未満：狭窄基準を満たさない\")}\n{note}※上記に加え「CEAが困難」であることが適応の前提{endnote}"
+  },
+  {
+    "trigger": ";cea_highrisk",
+    "title": "CEA High Risk評価（SAPPHIRE・自動集計）",
+    "body": "{note}CEA High Risk症例（SAPPHIRE研究で規定された因子の抜粋）。以下が1つ以上でHigh Riskと定義{endnote}\n**CEA High Risk評価（SAPPHIRE）**　{today}\n{c:r1#高齢者（>80歳）}\n{c:r2#CEA再狭窄症例}\n{c:r3#ICA高位病変または鎖骨下より下部}\n{c:r4#反対側頚動脈閉塞}\n{c:r5#反対側喉頭神経麻痺}\n{c:r6#頚部の放射線治療の既往}\n{c:r7#うっ血性心不全（ClassIII/IV）または左心室機能不全（LVEF<30%）}\n{c:r8#心筋梗塞（4週間以内、ただし24時間以上）}\n{c:r9#不安定狭心症（CCS ClassIII/IV）}\n{c:r10#6週以内の開胸手術予定}\n{c:r11#重度肺疾患}\n該当因子数：{=risk_count: (r1?1:0)+(r2?1:0)+(r3?1:0)+(r4?1:0)+(r5?1:0)+(r6?1:0)+(r7?1:0)+(r8?1:0)+(r9?1:0)+(r10?1:0)+(r11?1:0)}\n判定：{=interp: risk_count>=1 ? \"CEA High Risk症例（該当因子あり）\" : \"High Risk因子なし\"}"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "trigger": ";adl",
+    "title": "ADL分類（Activity of Daily Living）",
+    "body": "{note}Activity of Daily Living（術後6カ月後に判定）{endnote}\n**ADL分類**　{today}\nADL：{s:adl#ADL[ADL-I|ADL-II|ADL-III|ADL-IV|ADL-V|死亡]=ADL-I}\n判定：{=interp: adl==\"ADL-I\" ? \"ADL-I：ほとんど正常（社会復帰）\" : adl==\"ADL-II\" ? \"ADL-II：日常生活自力で可能（一部社会復帰）\" : adl==\"ADL-III\" ? \"ADL-III：日常生活可能だが介助要（社会復帰は不可）\" : adl==\"ADL-IV\" ? \"ADL-IV：ねたきり\" : adl==\"ADL-V\" ? \"ADL-V：植物状態\" : \"死亡\"}"
+  },
+  {
+    "trigger": ";kps",
+    "title": "Karnofsky Performance Status",
+    "body": "{note}Karnofsky Performance Status（0〜100%）。100:正常、症状なし / 90:軽い症状あるが正常活動可 / 80:努力すれば正常活動可 / 70:自分の世話は可能だが正常活動・労働は不可 / 60:時々介助が必要 / 50:かなりの介助と頻回の医療を要す / 40:動けず適切な医療・看護を要す / 30:高度障害、入院を要すが死は差し迫っていない / 20:非常に重症、入院と積極的治療が必要 / 10:死期切迫 / 0:死{endnote}\n**Karnofsky Performance Status**　{today}\nKPS：{s:kps#KPS[100|90|80|70|60|50|40|30|20|10|0]=100}%\n判定：{=interp: kps>=80 ? \"正常の活動が可能、特別な看護を要さない\" : kps>=50 ? \"労働は不可、自宅で自分の必要の大部分を満たすが種々の程度の介助を要する\" : \"自分の身の回りのことができず、施設・入院看護と同等の看護を要し急速に悪化しうる\"}"
+  },
+  {
+    "trigger": ";barthel",
+    "title": "Barthel Index（自動計算・100点満点）",
+    "body": "{note}Barthel Index（0〜100点）。ADLの評価{endnote}\n**Barthel Index**　{today}\n{section:項目}\n1.食事：{s:bi_feed#食事[10|5|0]=10}\n{note}10:自立（自助具可・標準的時間内に食べ終える） / 5:部分介助 / 0:全介助{endnote}\n2.移乗（車椅子⇔ベッド）：{s:bi_transfer#移乗[15|10|5|0]=15}\n{note}15:自立（ブレーキ・フットレスト操作含む） / 10:軽度の部分介助・監視 / 5:座位可だがほぼ全介助 / 0:全介助・不可{endnote}\n3.整容：{s:bi_groom#整容[5|0]=5}\n{note}5:自立（洗面・整髪・歯磨き・ひげ剃り） / 0:部分介助・不可{endnote}\n4.トイレ動作：{s:bi_toilet#トイレ[10|5|0]=10}\n{note}10:自立（衣服操作・後始末含む） / 5:部分介助 / 0:全介助・不可{endnote}\n5.入浴：{s:bi_bath#入浴[5|0]=5}\n{note}5:自立 / 0:部分介助・不可{endnote}\n6.歩行：{s:bi_walk#歩行[15|10|5|0]=15}\n{note}15:45m以上歩行（車椅子・歩行器除く補装具は可） / 10:45m以上の介助歩行・歩行器 / 5:歩行不能だが車椅子で45m以上操作可 / 0:上記以外{endnote}\n7.階段昇降：{s:bi_stairs#階段[10|5|0]=10}\n{note}10:自立（手すり可） / 5:介助・監視 / 0:不能{endnote}\n8.着替え：{s:bi_dress#着替え[10|5|0]=10}\n{note}10:自立（靴・ファスナー・装具含む） / 5:部分介助（半分以上自分で） / 0:上記以外{endnote}\n9.排便コントロール：{s:bi_bowel#排便[10|5|0]=10}\n{note}10:失禁なし（浣腸・坐薬可） / 5:時に失禁 / 0:上記以外{endnote}\n10.排尿コントロール：{s:bi_bladder#排尿[10|5|0]=10}\n{note}10:失禁なし（収尿器可） / 5:時に失禁 / 0:上記以外{endnote}\n{section:合計}\n合計：{=total: bi_feed+bi_transfer+bi_groom+bi_toilet+bi_bath+bi_walk+bi_stairs+bi_dress+bi_bowel+bi_bladder}/100点\n判定：{=interp: total>=85 ? \"自立レベル\" : total>=60 ? \"概ね自立〜軽度介助\" : total>=40 ? \"要介助\" : \"全介助レベル\"}"
+  },
+  {
+    "trigger": ";mrs",
+    "title": "modified Rankin Scale（mRS）",
+    "body": "{note}modified Rankin Scale（0〜6）。脳卒中後の機能転帰{endnote}\n**modified Rankin Scale（mRS）**　{today}\nmRS：{s:mrs#mRS[0|1|2|3|4|5|6]=0}\n判定：{=interp: mrs==\"0\" ? \"0：まったく症状なし\" : mrs==\"1\" ? \"1：症状はあるが特に問題となる障害なし\" : mrs==\"2\" ? \"2：軽度の障害（以前の活動は不可だが介助なく身の回りは可能）\" : mrs==\"3\" ? \"3：中等度の障害（何らかの介助を要するが介助なく歩行可能）\" : mrs==\"4\" ? \"4：比較的高度の障害（介助なく歩行・日常生活が困難）\" : mrs==\"5\" ? \"5：高度の障害（寝たきり・失禁・常に看護や注意が必要）\" : \"6：死亡\"}"
+  },
+  {
+    "trigger": ";mmt",
+    "title": "筋力段階表（MMT）",
+    "body": "{note}徒手筋力テスト（Manual Muscle Test）0〜5{endnote}\n**筋力段階表（MMT）**　{today}\n部位：{f:mmt_site#部位}\nMMT：{s:mmt#MMT[5|4|3|2|1|0]=5}\n判定：{=interp: mmt==\"5\" ? \"5 Normal：最大の抵抗と重力に抗し全可動域を動かせる\" : mmt==\"4\" ? \"4 Good：ある程度の抵抗と重力に抗し全可動域を動かせる\" : mmt==\"3\" ? \"3 Fair：抵抗を加えなければ重力に抗して全可動域を動かせる\" : mmt==\"2\" ? \"2 Poor：重力を除けば全可動域を動かせる\" : mmt==\"1\" ? \"1 Trace：筋収縮のみ認め関節運動は起こらない\" : \"0 Zero：筋収縮も認めない\"}"
+  },
+  {
+    "trigger": ";fim",
+    "title": "FIM（機能的自立度評価表・自動計算）",
+    "body": "{note}FIM（Functional Independence Measure）。各項目1〜7点。7:完全自立 6:修正自立 5:監視 4:最小介助 3:中等度介助 2:最大介助 1:全介助。運動13〜91・認知5〜35・合計18〜126{endnote}\n**FIM（Functional Independence Measure）**　{today}\n{section:セルフケア}\n{layout:grid-3}\n{s:fim_a#A食事[7|6|5|4|3|2|1]=7}\n{s:fim_b#B整容[7|6|5|4|3|2|1]=7}\n{s:fim_c#C清拭[7|6|5|4|3|2|1]=7}\n{s:fim_d#D更衣上半身[7|6|5|4|3|2|1]=7}\n{s:fim_e#E更衣下半身[7|6|5|4|3|2|1]=7}\n{s:fim_f#Fトイレ[7|6|5|4|3|2|1]=7}\n{layout:end}\n{section:排泄}\n{layout:grid-2}\n{s:fim_g#G排尿管理[7|6|5|4|3|2|1]=7}\n{s:fim_h#H排便管理[7|6|5|4|3|2|1]=7}\n{layout:end}\n{section:移乗}\n{layout:grid-3}\n{s:fim_i#Iベッド・椅子[7|6|5|4|3|2|1]=7}\n{s:fim_j#Jトイレ[7|6|5|4|3|2|1]=7}\n{s:fim_k#K浴槽・シャワー[7|6|5|4|3|2|1]=7}\n{layout:end}\n{section:移動}\n{layout:grid-2}\n{s:fim_l#L歩行・車椅子[7|6|5|4|3|2|1]=7}\n{s:fim_m#M階段[7|6|5|4|3|2|1]=7}\n{layout:end}\n{section:コミュニケーション}\n{layout:grid-2}\n{s:fim_n#N理解[7|6|5|4|3|2|1]=7}\n{s:fim_o#O表出[7|6|5|4|3|2|1]=7}\n{layout:end}\n{section:社会認識}\n{layout:grid-3}\n{s:fim_p#P社会的交流[7|6|5|4|3|2|1]=7}\n{s:fim_q#Q問題解決[7|6|5|4|3|2|1]=7}\n{s:fim_r#R記憶[7|6|5|4|3|2|1]=7}\n{layout:end}\n{section:合計}\n運動項目（A〜M）：{=motor: fim_a+fim_b+fim_c+fim_d+fim_e+fim_f+fim_g+fim_h+fim_i+fim_j+fim_k+fim_l+fim_m}/91点\n認知項目（N〜R）：{=cognitive: fim_n+fim_o+fim_p+fim_q+fim_r}/35点\n合計：{=total: motor+cognitive}/126点"
+  },
+  {
+    "trigger": ";jiritsu_shogai",
+    "title": "障害高齢者の日常生活自立度（寝たきり度）",
+    "body": "{note}障害高齢者の日常生活自立度（寝たきり度）：正常・J1・J2・A1・A2・B1・B2・C1・C2{endnote}\n**障害高齢者の日常生活自立度（寝たきり度）**　{today}\nランク：{s:rank#ランク[正常|J1|J2|A1|A2|B1|B2|C1|C2]=正常}\n判定：{=interp: rank==\"正常\" ? \"正常\" : rank==\"J1\" ? \"ランクJ（生活自立）：交通機関などを利用して外出する\" : rank==\"J2\" ? \"ランクJ（生活自立）：隣近所へなら外出する\" : rank==\"A1\" ? \"ランクA（準寝たきり）：介助により外出し日中はほとんど離床\" : rank==\"A2\" ? \"ランクA（準寝たきり）：外出頻度が少なく日中も寝たり起きたり\" : rank==\"B1\" ? \"ランクB（寝たきり）：車椅子に移乗し食事・排泄はベッドから離れて行う\" : rank==\"B2\" ? \"ランクB（寝たきり）：介助により車椅子に移乗する\" : rank==\"C1\" ? \"ランクC（寝たきり）：1日中ベッド上、自力で寝返りをうつ\" : \"ランクC（寝たきり）：1日中ベッド上、自力では寝返りもうたない\"}"
+  },
+  {
+    "trigger": ";jiritsu_ninchi",
+    "title": "認知症高齢者の日常生活自立度",
+    "body": "{note}認知症高齢者の日常生活自立度：I・IIa・IIb・IIIa・IIIb・IV・M{endnote}\n**認知症高齢者の日常生活自立度**　{today}\nランク：{s:rank#ランク[I|IIa|IIb|IIIa|IIIb|IV|M]=I}\n判定：{=interp: rank==\"I\" ? \"I：何らかの認知症はあるが日常生活は家庭内・社会的にほぼ自立\" : rank==\"IIa\" ? \"IIa：日常生活に支障をきたす症状・行動や意思疎通の困難さが家庭外で多少みられるが、誰かが注意すれば自立できる\" : rank==\"IIb\" ? \"IIb：上記IIの状態が家庭内でもみられる\" : rank==\"IIIa\" ? \"IIIa：日中を中心に介護を要する症状・行動・意思疎通の困難さがみられる\" : rank==\"IIIb\" ? \"IIIb：夜間を中心に上記IIIの状態がみられる\" : rank==\"IV\" ? \"IV：常に介護を必要とする症状・行動・意思疎通の困難さが頻繁にみられる\" : \"M：著しい精神症状・周辺症状あるいは重篤な身体疾患がみられ専門医療を要する\"}"
+  },
+  {
+    "trigger": ";brunnstrom",
+    "title": "Brunnstrom stage（片麻痺・上肢/手指/下肢）",
+    "body": "{note}ブルンストロームステージ（片麻痺の回復段階 Stage I〜VI）。I:弛緩性で随意運動なし → VI:分離運動が自由でほぼ正常{endnote}\n**Brunnstrom stage（片麻痺）**　{today}\n患側：{s:side#患側[右|左]=右}\n上肢（肩・肘）：{s:br_arm#上肢[I|II|III|IV|V|VI]=VI}\n{note}上肢 I:弛緩・随意運動なし / II:基本的共同運動またはその要素の最初の出現、痙縮発現 / III:共同運動を随意的に起こしうる、痙縮最強 / IV:痙縮減少、共同運動から逸脱（手を腰の後ろ・上肢前方水平挙上・肘90°で回内外） / V:共同運動から独立した運動ほぼ可能（横水平挙上・頭上挙上・肘伸展位で回内外） / VI:分離運動自由、協調運動ほぼ正常、痙縮ほぼ消失{endnote}\n手指：{s:br_hand#手指[I|II|III|IV|V|VI]=VI}\n{note}手指 I:弛緩性 / II:わずかな随意屈曲またはほとんど不可 / III:集団屈曲・鉤形握り可、随意的伸展は不可 / IV:横つまみ可、半随意的にわずかな伸展 / V:対向つまみ・円筒握り・球握り可、集団伸展可 / VI:全てのつまみ可、全可動域の随意伸展、分離運動可（健側より多少拙劣）{endnote}\n下肢：{s:br_leg#下肢[I|II|III|IV|V|VI]=VI}\n{note}下肢 I:弛緩・随意運動なし / II:わずかな随意運動 / III:坐位・立位で股・膝・足関節の屈曲可 / IV:坐位で膝屈曲90°以上・足関節背屈可 / V:立位で股伸展位のまま膝屈曲・膝伸展位で足関節背屈 / VI:立位で股外転（骨盤挙上以上）、下腿の内旋・外旋可{endnote}"
+  },
+  {
+    "trigger": ";parkinson",
+    "title": "Parkinson病 重症度分類（Yahr＋生活機能障害度）",
+    "body": "{note}Parkinson病の重症度分類：Hoehn-YahrのStage I〜V ＋ 生活機能障害度（I〜III度）{endnote}\n**Parkinson病 重症度分類**　{today}\nYahr重症度：{s:yahr#Yahr[I|II|III|IV|V]=I}\n{note}I:一側性障害、片側の振戦・固縮（軽症） / II:両側性障害、姿勢変化明確、日常生活やや不便 / III:明らかな歩行障害・立ち直り反射障害・突進現象、日常生活動作障害が進行 / IV:起立や歩行など日常生活動作の低下が著明、労働能力喪失 / V:完全な廃疾状態、介助による車椅子移動または寝たきり{endnote}\n生活機能障害度：{s:disability#生活機能障害度[I度|II度|III度]=I度}\n{note}I度:日常生活・通院にほとんど介助を要さない / II度:日常生活・通院に介助を要する / III度:日常生活に全面的な介助を要し、歩行・起立不能{endnote}"
+  }
+]

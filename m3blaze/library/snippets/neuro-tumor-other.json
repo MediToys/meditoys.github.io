@@ -1,0 +1,67 @@
+[
+  {
+    "trigger": ";who_grade",
+    "title": "脳腫瘍 WHO grade",
+    "body": "{note}脳腫瘍のWHO grade（WHO分類）{endnote}\n**脳腫瘍 WHO grade**　{today}\nGrade：{s:who#Grade[I|II|III|IV]=I}\n判定：{=interp: who==\"I\" ? \"Grade I：限局性で良性\" : who==\"II\" ? \"Grade II：浸潤性であるが低悪性（細胞異型のみ）\" : who==\"III\" ? \"Grade III：退形成性（細胞異型と核分裂像）\" : \"Grade IV：悪性（細胞異型・核分裂像に加え微小血管増生・壊死）\"}"
+  },
+  {
+    "trigger": ";simpson",
+    "title": "Simpson's Grading（髄膜腫摘出）",
+    "body": "{note}髄膜腫摘出度のSimpson Grading{endnote}\n**Simpson's Grading（髄膜腫摘出）**　{today}\nGrade：{s:simpson#Grade[I|II|III|IV|V]=I}\n判定：{=interp: simpson==\"I\" ? \"Grade I：肉眼的全摘＋硬膜付着部・異常骨・硬膜静脈洞の切除\" : simpson==\"II\" ? \"Grade II：肉眼的全摘＋硬膜付着部の凝固\" : simpson==\"III\" ? \"Grade III：肉眼的全摘、硬膜付着部の凝固なし\" : simpson==\"IV\" ? \"Grade IV：部分摘出\" : \"Grade V：単純減圧（生検の有無は問わない）\"}"
+  },
+  {
+    "trigger": ";samii",
+    "title": "聴神経鞘腫 病期分類（Samii）",
+    "body": "{note}聴神経鞘腫（前庭神経鞘腫）の病期分類（Samii）{endnote}\n**聴神経鞘腫 病期分類（Samii）**　{today}\nStage：{s:samii#Stage[T1|T2|T3a|T3b|T4a|T4b]=T1}\n判定：{=interp: samii==\"T1\" ? \"T1：内耳道内に限局\" : samii==\"T2\" ? \"T2：内耳道内から小脳橋角槽へ進展\" : samii==\"T3a\" ? \"T3a：小脳橋角槽に充満するが脳幹には及ばない\" : samii==\"T3b\" ? \"T3b：小脳橋角部に充満し脳幹に接する\" : samii==\"T4a\" ? \"T4a：脳幹を圧迫\" : \"T4b：脳幹が圧迫により著しく転位し第4脳室も変形\"}"
+  },
+  {
+    "trigger": ";knosp",
+    "title": "Knosp分類（下垂体腫瘍）",
+    "body": "{note}Knosp分類（下垂体腫瘍の海綿静脈洞浸潤のgrading）。MRI冠状断で評価{endnote}\n**Knosp分類（下垂体腫瘍）**　{today}\nGrade：{s:knosp#Grade[0|1|2|3|4]=0}\n判定：{=interp: knosp==\"0\" ? \"Grade 0：海綿静脈洞内および洞上の内頚動脈の内側縁を結ぶ線を越えない\" : knosp==\"1\" ? \"Grade 1：内頚動脈断面の正中を越えるが外側縁は越えない\" : knosp==\"2\" ? \"Grade 2：内頚動脈の外側縁まで伸展\" : knosp==\"3\" ? \"Grade 3：内頚動脈外側縁を越えるが海綿静脈洞内血管をencaseしない\" : \"Grade 4：内頚動脈外側縁を越え、海綿静脈洞内内頚動脈を完全に巻き込む\"}"
+  },
+  {
+    "trigger": ";hardy",
+    "title": "下垂体腫瘍分類（Hardy and Vezina）",
+    "body": "{note}下垂体腫瘍の分類（Hardy and Vezina）。Grade=トルコ鞍の状態、Stage=鞍外進展{endnote}\n**下垂体腫瘍分類（Hardy-Vezina）**　{today}\nGrade（トルコ鞍）：{s:hardy_g#Grade[0|I|II|III|IV|V]=0}\n{note}0:正常輪郭 / I:限局性の膨隆（micro） / II:鞍拡大（macro） / III:限局性の破壊（invasive） / IV:全体的破壊 / V:髄液・血行性の遠隔播種{endnote}\nStage（鞍外進展）：{s:hardy_s#Stage[なし|A|B|C|D|E]=なし}\n{note}鞍上（対称）A:視交叉槽まで / B:第3脳室陥凹まで / C:前部第3脳室全体　傍鞍（非対称）D:頭蓋内硬膜内　E:頭蓋外硬膜外（海綿静脈洞外側）{endnote}"
+  },
+  {
+    "trigger": ";gennarelli",
+    "title": "頭部外傷分類（Gennarelli）",
+    "body": "{note}頭部外傷の分類（Gennarelli）。DAI=びまん性軸索損傷{endnote}\n**頭部外傷分類（Gennarelli）**　{today}\n大分類：{s:gen#大分類[頭蓋損傷|局所性損傷|びまん性脳損傷]=局所性損傷}\n{note}頭蓋損傷：円蓋部骨折（線状/陥没）・頭蓋底骨折{endnote}\n局所性損傷の詳細：{s:gen_focal#局所性[硬膜外血腫|硬膜下血腫|脳挫傷|脳内血腫|該当なし]=該当なし}\nびまん性脳損傷の詳細：{s:gen_diffuse#びまん性[軽度脳震盪|古典的脳震盪|軽度DAI|中等度DAI|重度DAI|該当なし]=該当なし}\n{note}軽度脳震盪：意識消失を伴わない一過性の神経機能障害 / 古典的脳震盪：一過性の意識消失（6時間未満）を伴う一過性神経障害 / 軽度DAI：昏睡6〜24時間、遷延性・永続性の神経・認知障害 / 中等度DAI：昏睡24時間超、脳幹機能障害なし / 重度DAI：昏睡24時間超、脳幹機能障害あり{endnote}"
+  },
+  {
+    "trigger": ";chiari",
+    "title": "Chiari奇形の分類",
+    "body": "{note}Chiari奇形の分類{endnote}\n**Chiari奇形の分類**　{today}\n型：{s:chiari#型[I型|II型|III型|IV型]=I型}\n判定：{=interp: chiari==\"I型\" ? \"I型：小脳扁桃の頚椎管内への偏位\" : chiari==\"II型\" ? \"II型：小脳中部と小脳扁桃が頚椎管内に陥入し腰仙部脊髄髄膜瘤を合併（Arnold-Chiari奇形）\" : chiari==\"III型\" ? \"III型：小脳が頚椎の二分脊椎から脱出する後頭部脳髄膜瘤\" : \"IV型：小脳の形成不全のみで陥入のないもの\"}"
+  },
+  {
+    "trigger": ";galassi",
+    "title": "中頭蓋窩くも膜嚢胞の分類（Galassi）",
+    "body": "{note}中頭蓋窩くも膜嚢胞の分類（Galassi）{endnote}\n**中頭蓋窩くも膜嚢胞の分類（Galassi）**　{today}\n型：{s:galassi#型[I型|II型|III型]=I型}\n判定：{=interp: galassi==\"I型\" ? \"I型：小さい紡錘形\" : galassi==\"II型\" ? \"II型：中等度の大きさ\" : \"III型：大きな嚢胞\"}"
+  },
+  {
+    "trigger": ";gardner_robertson",
+    "title": "聴力温存の分類（Gardner-Robertson・自動判定）",
+    "body": "{note}聴力温存の分類（Gardner-Robertson）。純音オージオグラム(dB)と語音明瞭度(%)の分類が一致しないときは低い方（悪い方）を採用。I 良好:0〜30dB/70〜100% ／ II 有用:31〜50dB/50〜69% ／ III 有用でない:51〜90dB/5〜49% ／ IV 不良:91dB〜/1〜4% ／ V なし:検査不能/0%{endnote}\n**聴力温存の分類（Gardner-Robertson）**　{today}\n純音聴力：{n:gr_db#純音（dB）=0}\n語音明瞭度：{n:gr_wrs#語音明瞭度（%）=100}\nClass番号：{=grclass: max(gr_db<=30?1:gr_db<=50?2:gr_db<=90?3:4, gr_wrs>=70?1:gr_wrs>=50?2:gr_wrs>=5?3:gr_wrs>=1?4:5)}\n判定：Class {=grlabel: grclass==1?\"I（良好）\":grclass==2?\"II（有用）\":grclass==3?\"III（有用でない）\":grclass==4?\"IV（不良）\":\"V（なし）\"}"
+  },
+  {
+    "trigger": ";house_brackmann",
+    "title": "House-Brackmann分類（顔面神経）",
+    "body": "{note}Modified House-Brackmann Grading of Facial Nerve Function（顔面神経機能、I〜VI）{endnote}\n**House-Brackmann分類（顔面神経）**　{today}\nGrade：{s:hb#Grade[I|II|III|IV|V|VI]=I}\n判定：{=interp: hb==\"I\" ? \"I：全領域で正常\" : hb==\"II\" ? \"II：軽度の麻痺（slight weakness）\" : hb==\"III\" ? \"III：明らかな麻痺、努力すれば完全閉眼可能\" : hb==\"IV\" ? \"IV：不完全閉眼、安静時は正常な筋緊張と対称性\" : hb==\"V\" ? \"V：かろうじて動きを認める、安静時に非対称\" : \"VI：完全麻痺\"}"
+  },
+  {
+    "trigger": ";sleep_eeg",
+    "title": "脳波的睡眠分類（Rechtschaffen-Kales）",
+    "body": "{note}脳波的睡眠分類表（Rechtschaffen & Kales 1968）{endnote}\n**脳波的睡眠分類（Rechtschaffen-Kales）**　{today}\nStage：{s:sleep#Stage[W|Stage 1|Stage 2|Stage 3|Stage 4|REM]=W}\n判定：{=interp: sleep==\"W\" ? \"覚醒期（W）：α波（覚醒）〜α波断続（弛緩）\" : sleep==\"Stage 1\" ? \"浅眠期（Stage 1・軽睡眠初期）：α波消失・平坦波型、低振幅θ波・速波、頭蓋頂鋭波（瘤波）\" : sleep==\"Stage 2\" ? \"軽睡眠期（Stage 2）：紡錘波とK複合波、背景は中等度振幅徐波\" : sleep==\"Stage 3\" ? \"中等度睡眠期（Stage 3）：紡錘波と高振幅徐波（20〜50%）\" : sleep==\"Stage 4\" ? \"深睡眠期（Stage 4）：高振幅徐波の連続（50%以上）、紡錘波(-)\" : \"REM睡眠期：低振幅θ波・速波と急速眼球運動の出現\"}"
+  },
+  {
+    "trigger": ";engel",
+    "title": "てんかん手術予後分類（Engel）",
+    "body": "{note}てんかん手術予後分類（Engel分類）。Class I〜IV。IAは術後早期（数週）の発作を除く{endnote}\n**てんかん手術予後分類（Engel）**　{today}\nClass：{s:engel#Class[IA|IB|IC|ID|IIA|IIB|IIC|IID|IIIA|IIIB|IVA|IVB|IVC]=IA}\n判定：{=interp: engel==\"IA\" ? \"Class I-A：術後、完全に発作消失\" : engel==\"IB\" ? \"Class I-B：術後、非機能障害性の単純部分発作のみ\" : engel==\"IC\" ? \"Class I-C：術後に機能障害性発作があったが、少なくとも2年間は消失\" : engel==\"ID\" ? \"Class I-D：抗てんかん薬中止時の全般痙攣のみ\" : engel==\"IIA\" ? \"Class II-A：当初は機能障害性発作なしだが現在は発作あり\" : engel==\"IIB\" ? \"Class II-B：術後まれな機能障害性発作\" : engel==\"IIC\" ? \"Class II-C：術後にまれ以上の機能障害性発作があったが、少なくとも2年間はまれ\" : engel==\"IID\" ? \"Class II-D：夜間発作のみ\" : engel==\"IIIA\" ? \"Class III-A：意義のある発作減少（worthwhile seizure reduction）\" : engel==\"IIIB\" ? \"Class III-B：追跡期間の半分超に及ぶ長期の発作消失期間（2年以上）\" : engel==\"IVA\" ? \"Class IV-A：有意な発作減少\" : engel==\"IVB\" ? \"Class IV-B：明らかな変化なし\" : \"Class IV-C：発作の悪化\"}"
+  },
+  {
+    "trigger": ";joa_cervical",
+    "title": "頚髄症治療成績判定基準（JOA・自動計算17点）",
+    "body": "{note}頚髄症治療成績判定基準（日本整形外科学会 JOAスコア、17点満点）{endnote}\n**頚髄症治療成績判定基準（JOA）**　{today}\nI.上肢運動機能：{s:joa_ue#上肢運動[0|1|2|3|4]=4}\n{note}0:箸・スプーンいずれでも自力摂食不可 / 1:スプーンで可、箸では不可 / 2:不自由だが箸で自力摂食可 / 3:箸で日常食事するがぎこちない / 4:正常{endnote}\nII.下肢運動機能：{s:joa_le#下肢運動[0|1|2|3|4]=4}\n{note}0:歩行不能 / 1:平地でも杖・支持を要す / 2:平地は不要だが階段で要す / 3:平地・階段とも不要だがぎこちない / 4:正常{endnote}\nIII.知覚 上肢：{s:joa_sue#知覚上肢[0|1|2]=2}\nIII.知覚 下肢：{s:joa_sle#知覚下肢[0|1|2]=2}\nIII.知覚 躯幹：{s:joa_st#知覚躯幹[0|1|2]=2}\n{note}知覚（各部位）：0:明白な知覚障害 / 1:軽度の知覚障害またはシビレ感 / 2:正常{endnote}\nIV.膀胱機能：{s:joa_bladder#膀胱[0|1|2|3]=3}\n{note}0:尿閉 / 1:高度の排尿困難（残尿感・怒責・淋瀝） / 2:軽度の排尿困難（頻尿・開始遅延） / 3:正常{endnote}\n合計：{=total: joa_ue+joa_le+joa_sue+joa_sle+joa_st+joa_bladder}/17点"
+  }
+]

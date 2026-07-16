@@ -1,0 +1,32 @@
+[
+  {
+    "trigger": ";jcs",
+    "title": "JCS（Japan Coma Scale / 3-3-9度方式）",
+    "body": "{note}Japan Coma Scale（3-3-9度方式）。I桁:覚醒している / II桁:刺激すると覚醒 / III桁:刺激しても覚醒しない。附）R:不穏, I:糞尿失禁, A:自発性喪失。例 II-30-R{endnote}\n**JCS（Japan Coma Scale / 3-3-9度方式）**　{today}\n意識レベル：{s:jcs#意識レベル[0|I-1|I-2|I-3|II-10|II-20|II-30|III-100|III-200|III-300]=0}\n{note}0:清明 / I-1:清明とはいえない / I-2:見当識障害 / I-3:名前・生年月日が言えない / II-10:呼びかけで容易に開眼 / II-20:大声・体を揺さぶると開眼 / II-30:痛み刺激で辛うじて開眼 / III-100:払いのける動作 / III-200:少し手足を動かす・顔をしかめる（除脳硬直含む） / III-300:痛み刺激に反応なし{endnote}\n附（該当あれば）：{m:jcs_suffix#附[R|I|A]}\n判定：JCS {=jcs}{=count(jcs_suffix)>0 ? \"-\"+join(jcs_suffix,\"\") : \"\"}"
+  },
+  {
+    "trigger": ";jcs_child",
+    "title": "小児JCS（3-3-9度方式）",
+    "body": "{note}小児の3-3-9度方式（坂本）。Grade1:覚醒 / Grade2:刺激で覚醒 / Grade3:刺激しても覚醒しない{endnote}\n**小児JCS（3-3-9度方式）**　{today}\n意識レベル：{s:cjcs#意識レベル[0|1|2|3|10|20|30|100|200|300]=0}\n{note}【1:覚醒している】1:あやすと笑う（不十分で声を出さず）/ 2:あやしても笑わないが視線が合う / 3:母親と視線が合わない　【2:刺激で覚醒】10:飲物・ニップルを見せると飲もう・吸う / 20:呼びかけで開眼し目を向ける / 30:呼びかけ反復で辛うじて開眼　【3:刺激しても覚醒せず】100:払いのける / 200:手足を少し動かす・顔をしかめる / 300:痛み刺激に反応せず{endnote}\n判定：小児JCS {=cjcs}"
+  },
+  {
+    "trigger": ";gcs",
+    "title": "GCS（Glasgow Coma Scale・自動計算）",
+    "body": "{note}GCS：E(1-4)+V(1-5)+M(1-6)=3〜15。最重症3点・最軽症15点。V/Mは繰り返し検査での最良反応{endnote}\n**GCS（Glasgow Coma Scale）**　{today}\nE 開眼：{s:gcs_e#E開眼[4|3|2|1]=4}\n{note}4:自発的に / 3:音声により / 2:疼痛により / 1:開眼せず{endnote}\nV 発語：{s:gcs_v#V発語[5|4|3|2|1]=5}\n{note}5:指南力良好 / 4:会話混乱 / 3:言語混乱 / 2:理解不明の声 / 1:発語せず{endnote}\nM 運動：{s:gcs_m#M運動[6|5|4|3|2|1]=6}\n{note}6:命令に従う / 5:疼痛部認識可能 / 4:逃避（四肢屈曲反応） / 3:異常屈曲 / 2:四肢伸展反応 / 1:まったく動かず{endnote}\n合計：GCS {=gcs: gcs_e+gcs_v+gcs_m}（E{=gcs_e}V{=gcs_v}M{=gcs_m}）/15\n重症度：{=severity: gcs>=13 ? \"軽症\" : gcs>=9 ? \"中等症\" : \"重症\"}"
+  },
+  {
+    "trigger": ";gos",
+    "title": "GOS（Glasgow Outcome Scale）",
+    "body": "{note}Glasgow Outcome Scale（Jennett-Bond 1975）。転帰の評価{endnote}\n**GOS（Glasgow Outcome Scale）**　{today}\n転帰：{s:gos#転帰[GR|MD|SD|VS|D]=GR}\n判定：{=interp: gos==\"GR\" ? \"GR: Good Recovery（軽度の神経障害はあっても自立した生活が可能）\" : gos==\"MD\" ? \"MD: Moderately Disabled（神経・知的障害はあるが自立）\" : gos==\"SD\" ? \"SD: Severely Disabled（意識はあるが日常生活は全介助）\" : gos==\"VS\" ? \"VS: Vegetative Survival（植物状態）\" : \"D: Dead（死亡）\"}"
+  },
+  {
+    "trigger": ";wfns",
+    "title": "WFNS Grading（SAH・GCSから自動判定）",
+    "body": "{note}WFNS SAH grading。GCS合計と神経脱落症状（麻痺/失語）から判定。I:GCS15・脱落(-) / II:GCS13-14・脱落(-) / III:GCS13-14・脱落(+) / IV:GCS7-12・脱落(±) / V:GCS3-6・脱落(±){endnote}\n**W.F.N.S. Grading（SAH）**　{today}\nGCS合計：{n:wfns_gcs#GCS合計=15}\n{c:wfns_deficit#神経脱落症状あり（麻痺および/または失語）}\n判定：{=grade: wfns_gcs>=15 ? \"Grade I\" : wfns_gcs>=13 ? (wfns_deficit ? \"Grade III\" : \"Grade II\") : wfns_gcs>=7 ? \"Grade IV\" : \"Grade V\"}"
+  },
+  {
+    "trigger": ";huntkosnik",
+    "title": "Hunt & Kosnik分類（SAH重症度）",
+    "body": "{note}Hunt & Kosnik分類。重篤な全身疾患（高血圧・糖尿病・著明な動脈硬化・慢性肺疾患）または血管写で著明な血管攣縮がある場合は重症度を1段階悪い方へ移す{endnote}\n**Hunt & Kosnik分類**　{today}\nGrade：{s:hk#Grade[0|1|1a|2|3|4|5]=1}\n判定：{=interp: hk==\"0\" ? \"G0：未破裂脳動脈瘤症例\" : hk==\"1\" ? \"G1：無症状あるいは軽度頭痛・項部硬直\" : hk==\"1a\" ? \"G1a：急性期症状なく神経症状が固定した症例\" : hk==\"2\" ? \"G2：中等度〜高度の頭痛・項部硬直を示すが、脳神経障害以外の神経症候なし\" : hk==\"3\" ? \"G3：傾眠・錯乱、軽度の局所神経障害を持つこともある\" : hk==\"4\" ? \"G4：昏迷、中等度〜強度の片麻痺、ときに除脳硬直・自律神経障害の初期症状\" : \"G5：深昏睡、除脳硬直、瀕死の状態\"}"
+  }
+]
