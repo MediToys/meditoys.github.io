@@ -17,7 +17,7 @@
   {
     "trigger": ";ich_grading",
     "title": "脳内出血 Neurological Grading（金谷）",
-    "body": "{note}脳内出血の神経学的重症度分類（金谷ら）。3-3-9度方式（JCS）と対応{endnote}\n**脳内出血 Neurological Grading（金谷）**　{today}\nGrade：{s:ich#Grade[1|2|3|4a|4b|5]=1}\n判定：{=interp: ich==\"1\" ? \"Grade 1：alertness or confusion（JCS 0〜I）\" : ich==\"2\" ? \"Grade 2：somnolence（JCS II-1）\" : ich==\"3\" ? \"Grade 3：stupor（JCS II-2, 3）\" : ich==\"4a\" ? \"Grade 4a：semicoma、ヘルニア徴候なし（JCS III-1）\" : ich==\"4b\" ? \"Grade 4b：semicoma、ヘルニア徴候あり（JCS III-2）\" : \"Grade 5：deep coma（JCS III-3）\"}"
+    "body": "{note}脳内出血の神経学的重症度分類（金谷ら）。3-3-9度方式（JCS）と対応{endnote}\n**脳内出血 Neurological Grading（金谷）**　{today}\nGrade：{s:ich#Grade[1|2|3|4a|4b|5]=1}\n判定：{=interp: ich==\"1\" ? \"Grade 1：清明〜錯乱（alertness or confusion、JCS 0〜I）\" : ich==\"2\" ? \"Grade 2：傾眠（somnolence、JCS II-1）\" : ich==\"3\" ? \"Grade 3：昏迷（stupor、JCS II-2, 3）\" : ich==\"4a\" ? \"Grade 4a：半昏睡、ヘルニア徴候なし（semicoma without herniation、JCS III-1）\" : ich==\"4b\" ? \"Grade 4b：半昏睡、ヘルニア徴候あり（semicoma with herniation、JCS III-2）\" : \"Grade 5：深昏睡（deep coma、JCS III-3）\"}"
   },
   {
     "trigger": ";putaminal",

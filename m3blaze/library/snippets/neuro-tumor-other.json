@@ -47,7 +47,7 @@
   {
     "trigger": ";house_brackmann",
     "title": "House-Brackmann分類（顔面神経）",
-    "body": "{note}Modified House-Brackmann Grading of Facial Nerve Function（顔面神経機能、I〜VI）{endnote}\n**House-Brackmann分類（顔面神経）**　{today}\nGrade：{s:hb#Grade[I|II|III|IV|V|VI]=I}\n判定：{=interp: hb==\"I\" ? \"I：全領域で正常\" : hb==\"II\" ? \"II：軽度の麻痺（slight weakness）\" : hb==\"III\" ? \"III：明らかな麻痺、努力すれば完全閉眼可能\" : hb==\"IV\" ? \"IV：不完全閉眼、安静時は正常な筋緊張と対称性\" : hb==\"V\" ? \"V：かろうじて動きを認める、安静時に非対称\" : \"VI：完全麻痺\"}"
+    "body": "{note}Modified House-Brackmann Grading of Facial Nerve Function（顔面神経機能、I〜VI）{endnote}\n**House-Brackmann分類（顔面神経）**　{today}\nGrade：{s:hb#Grade[I|II|III|IV|V|VI]=I}\n判定：{=interp: hb==\"I\" ? \"I 正常：全領域で正常\" : hb==\"II\" ? \"II 軽度麻痺：軽度の筋力低下（slight weakness）\" : hb==\"III\" ? \"III 中等度麻痺：明らかな筋力低下、努力すれば完全閉眼可能\" : hb==\"IV\" ? \"IV やや高度麻痺：不完全閉眼、安静時は正常な筋緊張と対称性\" : hb==\"V\" ? \"V 高度麻痺：かろうじて動きを認める、安静時に非対称\" : \"VI 完全麻痺：完全麻痺\"}"
   },
   {
     "trigger": ";sleep_eeg",
