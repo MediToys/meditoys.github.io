@@ -2,9 +2,9 @@
   "channel": "shared",
   "extension_version": "1.4.0",
   "counts": {
-    "snippets": 13,
+    "snippets": 14,
     "pdf_templates": 1,
-    "files": 15
+    "files": 16
   },
   "files": [
     {
@@ -81,6 +81,11 @@
       "path": "snippets/sample-snippets.json",
       "size": 6787,
       "sha": "d61c40fbd3101506"
+    },
+    {
+      "path": "snippets/updrs.json",
+      "size": 6428,
+      "sha": "19f2f85c039135f2"
     }
   ]
 }
