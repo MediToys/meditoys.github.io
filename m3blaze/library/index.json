@@ -2,9 +2,9 @@
   "channel": "shared",
   "extension_version": "1.4.0",
   "counts": {
-    "snippets": 12,
+    "snippets": 13,
     "pdf_templates": 1,
-    "files": 14
+    "files": 15
   },
   "files": [
     {
@@ -28,6 +28,11 @@
       "sha": "da2228c967a8961f"
     },
     {
+      "path": "snippets/kaigo-ninteir.json",
+      "size": 6863,
+      "sha": "44acd0aec4ba8ab9"
+    },
+    {
       "path": "snippets/lipid-converter.json",
       "size": 1169,
       "sha": "09b897689fe398de"
@@ -39,8 +44,8 @@
     },
     {
       "path": "snippets/neuro-adl-function.json",
-      "size": 12382,
-      "sha": "8a8d7517b91599f3"
+      "size": 12575,
+      "sha": "ce29ed13a9424cee"
     },
     {
       "path": "snippets/neuro-consciousness.json",
@@ -49,18 +54,18 @@
     },
     {
       "path": "snippets/neuro-stroke-hemorrhage.json",
-      "size": 7153,
-      "sha": "e3899e9f229b60f0"
+      "size": 7260,
+      "sha": "50b831a38e6e095c"
     },
     {
       "path": "snippets/neuro-tumor-other.json",
-      "size": 11150,
-      "sha": "fecd469aad31485c"
+      "size": 11243,
+      "sha": "c3147bb1d161c47f"
     },
     {
       "path": "snippets/neuro-vascular.json",
-      "size": 10936,
-      "sha": "144afe705b83c20b"
+      "size": 11067,
+      "sha": "b29c20732feeca2b"
     },
     {
       "path": "snippets/noudock.json",
