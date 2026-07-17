@@ -2,9 +2,9 @@
   "channel": "shared",
   "extension_version": "1.4.0",
   "counts": {
-    "snippets": 14,
+    "snippets": 15,
     "pdf_templates": 1,
-    "files": 16
+    "files": 17
   },
   "files": [
     {
@@ -21,6 +21,11 @@
       "path": "snippets/design.json",
       "size": 2460,
       "sha": "d7cebcc58b01746b"
+    },
+    {
+      "path": "snippets/eeg-findings.json",
+      "size": 7739,
+      "sha": "ff23403573ed8d3c"
     },
     {
       "path": "snippets/hdsr.json",
