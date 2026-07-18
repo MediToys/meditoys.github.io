@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gupdate xmlns="http://www.google.com/update2/response" protocol="2.0">
   <app appid="ajdjiabjfadmoeedjfacfgadomddcajm">
-    <updatecheck codebase="https://meditoys.github.io/stable/meditoys.crx" version="2.11.42" />
+    <updatecheck codebase="https://meditoys.github.io/stable/meditoys.crx" version="2.11.43" />
   </app>
 </gupdate>
