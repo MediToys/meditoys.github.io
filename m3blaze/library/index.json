@@ -1,10 +1,11 @@
 {
   "channel": "shared",
-  "extension_version": "1.4.0",
+  "extension_version": "1.5.0",
   "counts": {
-    "snippets": 15,
+    "snippets": 20,
+    "snippet_items": 80,
     "pdf_templates": 1,
-    "files": 17
+    "files": 22
   },
   "files": [
     {
@@ -16,6 +17,21 @@
       "path": "pdf/shindan_osaka.pdf",
       "size": 648845,
       "sha": "431a128eb5166d59"
+    },
+    {
+      "path": "snippets/cdr-sb.json",
+      "size": 2574,
+      "sha": "7b38ef755e242b62"
+    },
+    {
+      "path": "snippets/dasc21.json",
+      "size": 4779,
+      "sha": "edeabf9f5600a2d2"
+    },
+    {
+      "path": "snippets/dbd13.json",
+      "size": 2451,
+      "sha": "d85a2131fbdf9879"
     },
     {
       "path": "snippets/design.json",
@@ -46,6 +62,11 @@
       "path": "snippets/mmse.json",
       "size": 2847,
       "sha": "886a4c4fe3c99f21"
+    },
+    {
+      "path": "snippets/mocaj.json",
+      "size": 3057,
+      "sha": "efa687f4923ed669"
     },
     {
       "path": "snippets/neuro-adl-function.json",
@@ -88,9 +109,724 @@
       "sha": "d61c40fbd3101506"
     },
     {
+      "path": "snippets/tmt.json",
+      "size": 1994,
+      "sha": "446515fb65f54840"
+    },
+    {
       "path": "snippets/updrs.json",
       "size": 6428,
       "sha": "19f2f85c039135f2"
+    }
+  ],
+  "catalog": [
+    {
+      "trigger": ";cdrsb",
+      "title": "CDR-SB（臨床的認知症尺度 Sum of Boxes）",
+      "tags": [],
+      "category": "cdr-sb",
+      "file": "snippets/cdr-sb.json",
+      "sha": "9670afbdf77c12f7"
+    },
+    {
+      "trigger": ";dasc21",
+      "title": "DASC-21（地域包括ケアシステムにおける認知症アセスメントシート）",
+      "tags": [
+        "認知機能",
+        "認知症",
+        "スケール",
+        "DASC-21",
+        "地域包括ケア",
+        "生活機能",
+        "スクリーニング"
+      ],
+      "category": "dasc21",
+      "file": "snippets/dasc21.json",
+      "sha": "9fcf6eb25213a19c"
+    },
+    {
+      "trigger": ";dbd13",
+      "title": "DBD13（認知症行動障害尺度 短縮版）",
+      "tags": [
+        "認知機能",
+        "BPSD",
+        "スケール",
+        "DBD13",
+        "認知症行動障害尺度"
+      ],
+      "category": "dbd13",
+      "file": "snippets/dbd13.json",
+      "sha": "140fcbd849353416"
+    },
+    {
+      "trigger": ";design",
+      "title": "褥瘡 DESIGN分類",
+      "tags": [],
+      "category": "design",
+      "file": "snippets/design.json",
+      "sha": "dc2eec1772f795f3"
+    },
+    {
+      "trigger": ";eeg",
+      "title": "脳波所見レポート（標準・所見文自動生成）",
+      "tags": [],
+      "category": "eeg-findings",
+      "file": "snippets/eeg-findings.json",
+      "sha": "8f0da550d6a5a0ee"
+    },
+    {
+      "trigger": ";eeg_coma",
+      "title": "昏睡・脳症の脳波と予後",
+      "tags": [],
+      "category": "eeg-findings",
+      "file": "snippets/eeg-findings.json",
+      "sha": "54b3ad021215cc2d"
+    },
+    {
+      "trigger": ";eeg_pattern",
+      "title": "特徴的脳波パターン→臨床的意義",
+      "tags": [],
+      "category": "eeg-findings",
+      "file": "snippets/eeg-findings.json",
+      "sha": "7789bc64d049443c"
+    },
+    {
+      "trigger": ";hdsr",
+      "title": "HDS-R（改訂長谷川式簡易知能評価スケール）",
+      "tags": [
+        "認知機能",
+        "スケール",
+        "HDS-R",
+        "長谷川式"
+      ],
+      "category": "hdsr",
+      "file": "snippets/hdsr.json",
+      "sha": "9bf326da0d41f929"
+    },
+    {
+      "trigger": ";kaigo",
+      "title": "要介護認定 一次判定シミュレーション（簡易・参考）",
+      "tags": [
+        "介護",
+        "要介護認定",
+        "一次判定",
+        "基準時間",
+        "シミュレーション"
+      ],
+      "category": "kaigo-ninteir",
+      "file": "snippets/kaigo-ninteir.json",
+      "sha": "62cb87665a9a85a0"
+    },
+    {
+      "trigger": ";lipid",
+      "title": "脂質パネル 相互換算（Friedewald）",
+      "tags": [
+        "脂質",
+        "検査",
+        "換算",
+        "Friedewald"
+      ],
+      "category": "lipid-converter",
+      "file": "snippets/lipid-converter.json",
+      "sha": "568b32b2ddb93e85"
+    },
+    {
+      "trigger": ";mmse",
+      "title": "MMSE（認知症スクリーニング）",
+      "tags": [],
+      "category": "mmse",
+      "file": "snippets/mmse.json",
+      "sha": "8ef5f55c2ab58365"
+    },
+    {
+      "trigger": ";mocaj",
+      "title": "MoCA-J（日本語版モントリオール認知評価）",
+      "tags": [],
+      "category": "mocaj",
+      "file": "snippets/mocaj.json",
+      "sha": "d381f96a67312ef7"
+    },
+    {
+      "trigger": ";adl",
+      "title": "ADL分類（Activity of Daily Living）",
+      "tags": [],
+      "category": "neuro-adl-function",
+      "file": "snippets/neuro-adl-function.json",
+      "sha": "3cd0a53410551eac"
+    },
+    {
+      "trigger": ";barthel",
+      "title": "Barthel Index（自動計算・100点満点）",
+      "tags": [],
+      "category": "neuro-adl-function",
+      "file": "snippets/neuro-adl-function.json",
+      "sha": "e2721b8ab8a406c5"
+    },
+    {
+      "trigger": ";brunnstrom",
+      "title": "Brunnstrom stage（片麻痺・上肢/手指/下肢）",
+      "tags": [],
+      "category": "neuro-adl-function",
+      "file": "snippets/neuro-adl-function.json",
+      "sha": "797b9aecca640c93"
+    },
+    {
+      "trigger": ";fim",
+      "title": "FIM（機能的自立度評価表・自動計算）",
+      "tags": [],
+      "category": "neuro-adl-function",
+      "file": "snippets/neuro-adl-function.json",
+      "sha": "87bc5dc52dd27123"
+    },
+    {
+      "trigger": ";jiritsu_ninchi",
+      "title": "認知症高齢者の日常生活自立度",
+      "tags": [],
+      "category": "neuro-adl-function",
+      "file": "snippets/neuro-adl-function.json",
+      "sha": "313af535891dfec1"
+    },
+    {
+      "trigger": ";jiritsu_shogai",
+      "title": "障害高齢者の日常生活自立度（寝たきり度）",
+      "tags": [],
+      "category": "neuro-adl-function",
+      "file": "snippets/neuro-adl-function.json",
+      "sha": "3625f066f8a55e94"
+    },
+    {
+      "trigger": ";kps",
+      "title": "Karnofsky Performance Status",
+      "tags": [],
+      "category": "neuro-adl-function",
+      "file": "snippets/neuro-adl-function.json",
+      "sha": "9bd95c4514dd9d18"
+    },
+    {
+      "trigger": ";mmt",
+      "title": "筋力段階表（MMT）",
+      "tags": [],
+      "category": "neuro-adl-function",
+      "file": "snippets/neuro-adl-function.json",
+      "sha": "17ec3caf2f3ce176"
+    },
+    {
+      "trigger": ";mrs",
+      "title": "modified Rankin Scale（mRS）",
+      "tags": [],
+      "category": "neuro-adl-function",
+      "file": "snippets/neuro-adl-function.json",
+      "sha": "0d45564a2b74b2f9"
+    },
+    {
+      "trigger": ";parkinson",
+      "title": "Parkinson病 重症度分類（Yahr＋生活機能障害度）",
+      "tags": [],
+      "category": "neuro-adl-function",
+      "file": "snippets/neuro-adl-function.json",
+      "sha": "6aee5d8fb9ec7765"
+    },
+    {
+      "trigger": ";gcs",
+      "title": "GCS（Glasgow Coma Scale・自動計算）",
+      "tags": [],
+      "category": "neuro-consciousness",
+      "file": "snippets/neuro-consciousness.json",
+      "sha": "54f3646d0cd70b3f"
+    },
+    {
+      "trigger": ";gos",
+      "title": "GOS（Glasgow Outcome Scale）",
+      "tags": [],
+      "category": "neuro-consciousness",
+      "file": "snippets/neuro-consciousness.json",
+      "sha": "849bd159fa55607f"
+    },
+    {
+      "trigger": ";huntkosnik",
+      "title": "Hunt & Kosnik分類（SAH重症度）",
+      "tags": [],
+      "category": "neuro-consciousness",
+      "file": "snippets/neuro-consciousness.json",
+      "sha": "88a4ceb87f60f7e1"
+    },
+    {
+      "trigger": ";jcs",
+      "title": "JCS（Japan Coma Scale / 3-3-9度方式）",
+      "tags": [],
+      "category": "neuro-consciousness",
+      "file": "snippets/neuro-consciousness.json",
+      "sha": "85bdac603ea458f1"
+    },
+    {
+      "trigger": ";jcs_child",
+      "title": "小児JCS（3-3-9度方式）",
+      "tags": [],
+      "category": "neuro-consciousness",
+      "file": "snippets/neuro-consciousness.json",
+      "sha": "624b7bab37964dc1"
+    },
+    {
+      "trigger": ";wfns",
+      "title": "WFNS Grading（SAH・GCSから自動判定）",
+      "tags": [],
+      "category": "neuro-consciousness",
+      "file": "snippets/neuro-consciousness.json",
+      "sha": "b6bb49ddefe5bd9c"
+    },
+    {
+      "trigger": ";fisher",
+      "title": "FisherのCT分類（SAH）",
+      "tags": [],
+      "category": "neuro-stroke-hemorrhage",
+      "file": "snippets/neuro-stroke-hemorrhage.json",
+      "sha": "6b58ac547932f55a"
+    },
+    {
+      "trigger": ";hachinski",
+      "title": "Hachinski虚血スコア（自動計算）",
+      "tags": [],
+      "category": "neuro-stroke-hemorrhage",
+      "file": "snippets/neuro-stroke-hemorrhage.json",
+      "sha": "d33d7a5455491029"
+    },
+    {
+      "trigger": ";ich_grading",
+      "title": "脳内出血 Neurological Grading（金谷）",
+      "tags": [],
+      "category": "neuro-stroke-hemorrhage",
+      "file": "snippets/neuro-stroke-hemorrhage.json",
+      "sha": "3665cc6b01828931"
+    },
+    {
+      "trigger": ";mnihss",
+      "title": "Modified NIHSS 2001（自動計算・31点満点）",
+      "tags": [],
+      "category": "neuro-stroke-hemorrhage",
+      "file": "snippets/neuro-stroke-hemorrhage.json",
+      "sha": "a314d222b1a15237"
+    },
+    {
+      "trigger": ";putaminal",
+      "title": "被殻出血 CT分類（金谷）",
+      "tags": [],
+      "category": "neuro-stroke-hemorrhage",
+      "file": "snippets/neuro-stroke-hemorrhage.json",
+      "sha": "5542056357e700e3"
+    },
+    {
+      "trigger": ";scheie",
+      "title": "網膜細動脈硬化の分類（Scheie）",
+      "tags": [],
+      "category": "neuro-stroke-hemorrhage",
+      "file": "snippets/neuro-stroke-hemorrhage.json",
+      "sha": "9d95fdde9a1eb9a6"
+    },
+    {
+      "trigger": ";thalamic",
+      "title": "視床出血 CT分類（金谷）",
+      "tags": [],
+      "category": "neuro-stroke-hemorrhage",
+      "file": "snippets/neuro-stroke-hemorrhage.json",
+      "sha": "40f9be70f5132f21"
+    },
+    {
+      "trigger": ";chiari",
+      "title": "Chiari奇形の分類",
+      "tags": [],
+      "category": "neuro-tumor-other",
+      "file": "snippets/neuro-tumor-other.json",
+      "sha": "5c4d336847a85807"
+    },
+    {
+      "trigger": ";engel",
+      "title": "てんかん手術予後分類（Engel）",
+      "tags": [],
+      "category": "neuro-tumor-other",
+      "file": "snippets/neuro-tumor-other.json",
+      "sha": "8797e11d71d82f7c"
+    },
+    {
+      "trigger": ";galassi",
+      "title": "中頭蓋窩くも膜嚢胞の分類（Galassi）",
+      "tags": [],
+      "category": "neuro-tumor-other",
+      "file": "snippets/neuro-tumor-other.json",
+      "sha": "6e8e931c5562d961"
+    },
+    {
+      "trigger": ";gardner_robertson",
+      "title": "聴力温存の分類（Gardner-Robertson・自動判定）",
+      "tags": [],
+      "category": "neuro-tumor-other",
+      "file": "snippets/neuro-tumor-other.json",
+      "sha": "f94cee749d8a617b"
+    },
+    {
+      "trigger": ";gennarelli",
+      "title": "頭部外傷分類（Gennarelli）",
+      "tags": [],
+      "category": "neuro-tumor-other",
+      "file": "snippets/neuro-tumor-other.json",
+      "sha": "bfd05166915b3341"
+    },
+    {
+      "trigger": ";hardy",
+      "title": "下垂体腫瘍分類（Hardy and Vezina）",
+      "tags": [],
+      "category": "neuro-tumor-other",
+      "file": "snippets/neuro-tumor-other.json",
+      "sha": "3de1046319cf8078"
+    },
+    {
+      "trigger": ";house_brackmann",
+      "title": "House-Brackmann分類（顔面神経）",
+      "tags": [],
+      "category": "neuro-tumor-other",
+      "file": "snippets/neuro-tumor-other.json",
+      "sha": "dcaa64d06c9f3720"
+    },
+    {
+      "trigger": ";joa_cervical",
+      "title": "頚髄症治療成績判定基準（JOA・自動計算17点）",
+      "tags": [],
+      "category": "neuro-tumor-other",
+      "file": "snippets/neuro-tumor-other.json",
+      "sha": "ede6bcb7a2fb38e2"
+    },
+    {
+      "trigger": ";knosp",
+      "title": "Knosp分類（下垂体腫瘍）",
+      "tags": [],
+      "category": "neuro-tumor-other",
+      "file": "snippets/neuro-tumor-other.json",
+      "sha": "b91fd23d4017b131"
+    },
+    {
+      "trigger": ";samii",
+      "title": "聴神経鞘腫 病期分類（Samii）",
+      "tags": [],
+      "category": "neuro-tumor-other",
+      "file": "snippets/neuro-tumor-other.json",
+      "sha": "dc15a4cb7a162355"
+    },
+    {
+      "trigger": ";simpson",
+      "title": "Simpson's Grading（髄膜腫摘出）",
+      "tags": [],
+      "category": "neuro-tumor-other",
+      "file": "snippets/neuro-tumor-other.json",
+      "sha": "998d103833b7da49"
+    },
+    {
+      "trigger": ";sleep_eeg",
+      "title": "脳波的睡眠分類（Rechtschaffen-Kales）",
+      "tags": [],
+      "category": "neuro-tumor-other",
+      "file": "snippets/neuro-tumor-other.json",
+      "sha": "371aca0dabe07ef4"
+    },
+    {
+      "trigger": ";who_grade",
+      "title": "脳腫瘍 WHO grade",
+      "tags": [],
+      "category": "neuro-tumor-other",
+      "file": "snippets/neuro-tumor-other.json",
+      "sha": "f06cdfdbeae72f4e"
+    },
+    {
+      "trigger": ";cas_indication",
+      "title": "CASの適応基準",
+      "tags": [],
+      "category": "neuro-vascular",
+      "file": "snippets/neuro-vascular.json",
+      "sha": "bed38ef816980079"
+    },
+    {
+      "trigger": ";ccf_barrow",
+      "title": "Dural AVM（CCF）分類（Barrow）",
+      "tags": [],
+      "category": "neuro-vascular",
+      "file": "snippets/neuro-vascular.json",
+      "sha": "03d061584558bae6"
+    },
+    {
+      "trigger": ";cea_highrisk",
+      "title": "CEA High Risk評価（SAPPHIRE・自動集計）",
+      "tags": [],
+      "category": "neuro-vascular",
+      "file": "snippets/neuro-vascular.json",
+      "sha": "1321cb489ac73b59"
+    },
+    {
+      "trigger": ";davf_borden",
+      "title": "硬膜動静脈瘻 分類（Borden）",
+      "tags": [],
+      "category": "neuro-vascular",
+      "file": "snippets/neuro-vascular.json",
+      "sha": "96e1a5c6654b3911"
+    },
+    {
+      "trigger": ";davf_cognard",
+      "title": "硬膜動静脈瘻 分類（Cognard）",
+      "tags": [],
+      "category": "neuro-vascular",
+      "file": "snippets/neuro-vascular.json",
+      "sha": "2dd46aad8827cf96"
+    },
+    {
+      "trigger": ";davf_djindjian",
+      "title": "硬膜動静脈瘻 分類（Djindjian）",
+      "tags": [],
+      "category": "neuro-vascular",
+      "file": "snippets/neuro-vascular.json",
+      "sha": "e5cbda045efbf720"
+    },
+    {
+      "trigger": ";davf_lalwani",
+      "title": "硬膜動静脈瘻 分類（Lalwani）",
+      "tags": [],
+      "category": "neuro-vascular",
+      "file": "snippets/neuro-vascular.json",
+      "sha": "4d54bd724ceac81b"
+    },
+    {
+      "trigger": ";mod_steed",
+      "title": "内頚動脈閉塞試験 modified Steed分類（山下）",
+      "tags": [],
+      "category": "neuro-vascular",
+      "file": "snippets/neuro-vascular.json",
+      "sha": "045ca20425bd8af2"
+    },
+    {
+      "trigger": ";moyamoya_suzuki",
+      "title": "もやもや病 脳血管撮影6期分類（鈴木）",
+      "tags": [],
+      "category": "neuro-vascular",
+      "file": "snippets/neuro-vascular.json",
+      "sha": "2bb347572b3cbe45"
+    },
+    {
+      "trigger": ";spetzler",
+      "title": "Spetzler-Martin AVM Grade（自動計算）",
+      "tags": [],
+      "category": "neuro-vascular",
+      "file": "snippets/neuro-vascular.json",
+      "sha": "e350f8715b3d59ca"
+    },
+    {
+      "trigger": ";spinal_avm",
+      "title": "脊髄AVM（perimedullary AVF・Merland）",
+      "tags": [],
+      "category": "neuro-vascular",
+      "file": "snippets/neuro-vascular.json",
+      "sha": "e547b790e1ea9e34"
+    },
+    {
+      "trigger": ";steed",
+      "title": "内頚動脈閉塞試験 Steed分類",
+      "tags": [],
+      "category": "neuro-vascular",
+      "file": "snippets/neuro-vascular.json",
+      "sha": "51fe332ef72b5816"
+    },
+    {
+      "trigger": ";yamashita_hemo",
+      "title": "脳主幹動脈閉塞 血行動態分類（山下）",
+      "tags": [],
+      "category": "neuro-vascular",
+      "file": "snippets/neuro-vascular.json",
+      "sha": "1eaba47013daaef5"
+    },
+    {
+      "trigger": ";nd_keibu",
+      "title": "脳ドック 頚部血管超音波",
+      "tags": [
+        "脳ドック",
+        "頚部エコー",
+        "頚動脈"
+      ],
+      "category": "noudock",
+      "file": "snippets/noudock.json",
+      "sha": "0c1a82b0bb70a3a4"
+    },
+    {
+      "trigger": ";nd_kensa",
+      "title": "脳ドック 検査データ（身体計測・血液・尿・生理）",
+      "tags": [
+        "脳ドック",
+        "検査データ",
+        "採血"
+      ],
+      "category": "noudock",
+      "file": "snippets/noudock.json",
+      "sha": "3ae590607fae52ba"
+    },
+    {
+      "trigger": ";nd_mondan",
+      "title": "脳ドック 問診（既往歴・家族歴・生活習慣・自覚症状）",
+      "tags": [
+        "脳ドック",
+        "問診",
+        "既往歴",
+        "家族歴"
+      ],
+      "category": "noudock",
+      "file": "snippets/noudock.json",
+      "sha": "77c8b96cbe0a520a"
+    },
+    {
+      "trigger": ";nd_mri",
+      "title": "脳ドック MRI/MRA所見",
+      "tags": [
+        "脳ドック",
+        "MRI",
+        "MRA"
+      ],
+      "category": "noudock",
+      "file": "snippets/noudock.json",
+      "sha": "67ab1d4205b05fb0"
+    },
+    {
+      "trigger": ";nd_ninchi",
+      "title": "脳ドック 認知機能検査（スコアまとめ）",
+      "tags": [
+        "脳ドック",
+        "認知機能",
+        "MMSE"
+      ],
+      "category": "noudock",
+      "file": "snippets/noudock.json",
+      "sha": "a2b96f6f17fa436c"
+    },
+    {
+      "trigger": ";nd_report",
+      "title": "脳ドック 総合判定・報告書",
+      "tags": [
+        "脳ドック",
+        "報告書",
+        "総合判定"
+      ],
+      "category": "noudock",
+      "file": "snippets/noudock.json",
+      "sha": "20b137a893c4e23e"
+    },
+    {
+      "trigger": ";nd_uketsuke",
+      "title": "脳ドック 受付・基本情報",
+      "tags": [
+        "脳ドック",
+        "受付"
+      ],
+      "category": "noudock",
+      "file": "snippets/noudock.json",
+      "sha": "d4ba1aa2514611f8"
+    },
+    {
+      "trigger": ";nd_yosoku",
+      "title": "脳ドック 認知機能低下 早期予測スコア",
+      "tags": [
+        "脳ドック",
+        "認知機能",
+        "予測スコア"
+      ],
+      "category": "noudock",
+      "file": "snippets/noudock.json",
+      "sha": "a3d94f2db812f822"
+    },
+    {
+      "trigger": ";pecarn",
+      "title": "PECARN 小児頭部外傷CT適応ルール",
+      "tags": [],
+      "category": "pecarn",
+      "file": "snippets/pecarn.json",
+      "sha": "2ebe046c43fb2055"
+    },
+    {
+      "trigger": ";abcd2",
+      "title": "ABCD2（TIA後脳梗塞リスク）",
+      "tags": [],
+      "category": "sample-snippets",
+      "file": "snippets/sample-snippets.json",
+      "sha": "327884ea87168faf"
+    },
+    {
+      "trigger": ";chads",
+      "title": "CHADS2-VASc（心房細動・脳梗塞リスク）",
+      "tags": [],
+      "category": "sample-snippets",
+      "file": "snippets/sample-snippets.json",
+      "sha": "86da2d5a6f34cf48"
+    },
+    {
+      "trigger": ";das28",
+      "title": "DAS28-CRP",
+      "tags": [],
+      "category": "sample-snippets",
+      "file": "snippets/sample-snippets.json",
+      "sha": "2d8a17adefbb007d"
+    },
+    {
+      "trigger": ";nihss",
+      "title": "NIHSS（脳卒中重症度）",
+      "tags": [],
+      "category": "sample-snippets",
+      "file": "snippets/sample-snippets.json",
+      "sha": "79e7e1534a4d2c64"
+    },
+    {
+      "trigger": ";yanagihara",
+      "title": "柳原法（顔面神経麻痺）",
+      "tags": [],
+      "category": "sample-snippets",
+      "file": "snippets/sample-snippets.json",
+      "sha": "2d8d9d9768551390"
+    },
+    {
+      "trigger": ";tmt",
+      "title": "TMT（Trail Making Test 実行機能・処理速度）",
+      "tags": [
+        "認知機能",
+        "実行機能",
+        "TMT",
+        "Trail Making Test",
+        "処理速度"
+      ],
+      "category": "tmt",
+      "file": "snippets/tmt.json",
+      "sha": "444653ee0cb9c62e"
+    },
+    {
+      "trigger": ";updrs1",
+      "title": "MDS-UPDRS Part I（非運動症状のADL：nM-EDL）",
+      "tags": [],
+      "category": "updrs",
+      "file": "snippets/updrs.json",
+      "sha": "da9b5877438e6abe"
+    },
+    {
+      "trigger": ";updrs2",
+      "title": "MDS-UPDRS Part II（運動症状のADL：M-EDL）",
+      "tags": [],
+      "category": "updrs",
+      "file": "snippets/updrs.json",
+      "sha": "b554a502b6042668"
+    },
+    {
+      "trigger": ";updrs3",
+      "title": "MDS-UPDRS Part III（運動能力検査）",
+      "tags": [],
+      "category": "updrs",
+      "file": "snippets/updrs.json",
+      "sha": "443b862fe4f1e142"
+    },
+    {
+      "trigger": ";updrs4",
+      "title": "MDS-UPDRS Part IV（運動合併症）",
+      "tags": [],
+      "category": "updrs",
+      "file": "snippets/updrs.json",
+      "sha": "4c8de5130ee47491"
     }
   ]
 }

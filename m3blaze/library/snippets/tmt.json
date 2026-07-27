@@ -1,0 +1,8 @@
+[
+  {
+    "trigger": ";tmt",
+    "title": "TMT（Trail Making Test 実行機能・処理速度）",
+    "body": "**Trail Making Test（TMT）**　{today}　{patient}（ID:{id}　{age}歳）\n{note}Part A＝認知処理速度・注意、Part B＝実行機能（セットの切り替え）を評価。所要時間（秒）を計測し、誤りは検者がその場で指摘して修正させる（修正に要した時間は所要時間に含まれる）。中止目安：Part A 150秒 / Part B 300秒（未完了なら中止時間で記録し備考へ）。{endnote}\n\n{section:①Part A（数字 1→25 を順に線で結ぶ）}\n{layout:grid-2}\n{n:a_time#A所要秒=0}\n{n:a_err#A誤答回数=0}\n{layout:end}\n\n{section:②Part B（数字と仮名を交互に 1→あ→2→い→3→う…）}\n{layout:grid-2}\n{n:b_time#B所要秒=0}\n{n:b_err#B誤答回数=0}\n{layout:end}\n\n{section:③導出指標}\nPart A：{=a_time}秒（誤答{=a_err}回）／ Part B：{=b_time}秒（誤答{=b_err}回）\nB−A（差）：{=diff: b_time - a_time} 秒\nB/A（比）：{=ratio: a_time>0 ? round(b_time / a_time, 2) : 0}\n{note}B/A比・B−A差は処理速度の影響を差し引いた実行機能（セット転換）の指標。概ね B/A≧2.5〜3.0 で実行機能障害を示唆。{endnote}\n実行機能の目安：{=exec: a_time<=0 || b_time<=0 ? \"未計測\" : ratio>=3.0 ? \"実行機能障害の疑い（B/A≧3.0）\" : ratio>=2.5 ? \"境界域（B/A 2.5〜3.0）\" : \"比は正常範囲（B/A<2.5）\"}\n\n備考：{t:note#備考}\n{note}所要時間の絶対値は年齢・教育歴の影響を強く受けるため、TMT-J（日本版）の年代別基準値と照合すること。加齢で延長し、認知症では特に Part B の著明な延長・B/A比の上昇がみられる。数字・仮名の判別が困難な場合は課題成立の可否も併記する。{endnote}",
+    "tags": ["認知機能", "実行機能", "TMT", "Trail Making Test", "処理速度"]
+  }
+]
