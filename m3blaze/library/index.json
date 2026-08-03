@@ -1,6 +1,6 @@
 {
   "channel": "shared",
-  "extension_version": "1.6.0",
+  "extension_version": "1.6.1",
   "counts": {
     "snippets": 20,
     "snippet_items": 80,
@@ -115,8 +115,8 @@
     },
     {
       "path": "snippets/updrs.json",
-      "size": 6556,
-      "sha": "fee83fefa188e898"
+      "size": 6573,
+      "sha": "479ca6bb111cde9b"
     }
   ],
   "catalog": [
@@ -818,7 +818,7 @@
       "tags": [],
       "category": "運動障害",
       "file": "snippets/updrs.json",
-      "sha": "443b862fe4f1e142"
+      "sha": "6184da7b4eae4bea"
     },
     {
       "trigger": ";updrs4",
