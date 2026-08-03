@@ -74,7 +74,7 @@
   {
     "trigger": ";cea_highrisk",
     "title": "CEA High Risk評価（SAPPHIRE・自動集計）",
-    "body": "{note}CEA High Risk症例（SAPPHIRE研究で規定された因子の抜粋）。以下が1つ以上でHigh Riskと定義{endnote}\n**CEA High Risk評価（SAPPHIRE）**　{today}\n{c:r1#高齢者（>80歳）}\n{c:r2#CEA再狭窄症例}\n{c:r3#ICA高位病変または鎖骨下より下部}\n{c:r4#反対側頚動脈閉塞}\n{c:r5#反対側喉頭神経麻痺}\n{c:r6#頚部の放射線治療の既往}\n{c:r7#うっ血性心不全（ClassIII/IV）または左心室機能不全（LVEF<30%）}\n{c:r8#心筋梗塞（4週間以内、ただし24時間以上）}\n{c:r9#不安定狭心症（CCS ClassIII/IV）}\n{c:r10#6週以内の開胸手術予定}\n{c:r11#重度肺疾患}\n該当因子数：{=risk_count: (r1?1:0)+(r2?1:0)+(r3?1:0)+(r4?1:0)+(r5?1:0)+(r6?1:0)+(r7?1:0)+(r8?1:0)+(r9?1:0)+(r10?1:0)+(r11?1:0)}\n判定：{=interp: risk_count>=1 ? \"CEA High Risk症例（該当因子あり）\" : \"High Risk因子なし\"}",
+    "body": "{note}CEA High Risk症例（SAPPHIRE研究で規定された因子の抜粋）。以下が1つ以上でHigh Riskと定義{endnote}\n**CEA High Risk評価（SAPPHIRE）**　{today}\n{c:r1#高齢者（>80歳）} 高齢者（>80歳）\n{c:r2#CEA再狭窄症例} CEA再狭窄症例\n{c:r3#ICA高位病変または鎖骨下より下部} ICA高位病変/鎖骨下より下部\n{c:r4#反対側頚動脈閉塞} 反対側頚動脈閉塞\n{c:r5#反対側喉頭神経麻痺} 反対側喉頭神経麻痺\n{c:r6#頚部の放射線治療の既往} 頚部放射線治療の既往\n{c:r7#うっ血性心不全（ClassIII/IV）または左心室機能不全（LVEF<30%）} うっ血性心不全(III/IV)/LVEF<30%\n{c:r8#心筋梗塞（4週間以内、ただし24時間以上）} 心筋梗塞（4週以内・24時間以上）\n{c:r9#不安定狭心症（CCS ClassIII/IV）} 不安定狭心症（CCS III/IV）\n{c:r10#6週以内の開胸手術予定} 6週以内の開胸手術予定\n{c:r11#重度肺疾患} 重度肺疾患\n該当因子数：{=risk_count: (r1?1:0)+(r2?1:0)+(r3?1:0)+(r4?1:0)+(r5?1:0)+(r6?1:0)+(r7?1:0)+(r8?1:0)+(r9?1:0)+(r10?1:0)+(r11?1:0)}\n判定：{=interp: risk_count>=1 ? \"CEA High Risk症例（該当因子あり）\" : \"High Risk因子なし\"}",
     "category": "脳血管内治療"
   }
 ]

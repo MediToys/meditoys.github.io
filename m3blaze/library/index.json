@@ -45,8 +45,8 @@
     },
     {
       "path": "snippets/hdsr.json",
-      "size": 2999,
-      "sha": "3852b7d39cea86bb"
+      "size": 2995,
+      "sha": "6c621252e221796a"
     },
     {
       "path": "snippets/kaigo-ninteir.json",
@@ -60,18 +60,18 @@
     },
     {
       "path": "snippets/mmse.json",
-      "size": 2891,
-      "sha": "76c9a610b74633f7"
+      "size": 2887,
+      "sha": "d8c72b6df8d31411"
     },
     {
       "path": "snippets/mocaj.json",
-      "size": 3101,
-      "sha": "a48ac85745ea53c0"
+      "size": 3151,
+      "sha": "b2faeb6cfbaf3451"
     },
     {
       "path": "snippets/neuro-adl-function.json",
-      "size": 12943,
-      "sha": "3d7a18ff5cac9d6e"
+      "size": 13051,
+      "sha": "3682a9399307eea3"
     },
     {
       "path": "snippets/neuro-consciousness.json",
@@ -90,8 +90,8 @@
     },
     {
       "path": "snippets/neuro-vascular.json",
-      "size": 11561,
-      "sha": "35b62d0c48d115ea"
+      "size": 11892,
+      "sha": "657891c973118748"
     },
     {
       "path": "snippets/noudock.json",
@@ -100,8 +100,8 @@
     },
     {
       "path": "snippets/pecarn.json",
-      "size": 2113,
-      "sha": "e9f65810ac8cdc30"
+      "size": 2394,
+      "sha": "7b38dc9aabef04af"
     },
     {
       "path": "snippets/sample-snippets.json",
@@ -110,8 +110,8 @@
     },
     {
       "path": "snippets/tmt.json",
-      "size": 2074,
-      "sha": "94451c40ca04b9b2"
+      "size": 1974,
+      "sha": "b6e658176a0c9168"
     },
     {
       "path": "snippets/updrs.json",
@@ -142,7 +142,7 @@
       "tags": [],
       "category": "ADL・機能評価",
       "file": "snippets/neuro-adl-function.json",
-      "sha": "87bc5dc52dd27123"
+      "sha": "aaefef425e5caa33"
     },
     {
       "trigger": ";jiritsu_ninchi",
@@ -321,7 +321,7 @@
       "tags": [],
       "category": "神経・脳外科分類",
       "file": "snippets/pecarn.json",
-      "sha": "2ebe046c43fb2055"
+      "sha": "32ae5c0934fdc131"
     },
     {
       "trigger": ";scheie",
@@ -617,7 +617,7 @@
       "tags": [],
       "category": "脳血管内治療",
       "file": "snippets/neuro-vascular.json",
-      "sha": "1321cb489ac73b59"
+      "sha": "8dd394c5005917fc"
     },
     {
       "trigger": ";davf_borden",
@@ -748,7 +748,7 @@
       ],
       "category": "認知症・認知機能",
       "file": "snippets/hdsr.json",
-      "sha": "9bf326da0d41f929"
+      "sha": "41da50d924f77274"
     },
     {
       "trigger": ";mmse",
@@ -756,7 +756,7 @@
       "tags": [],
       "category": "認知症・認知機能",
       "file": "snippets/mmse.json",
-      "sha": "8ef5f55c2ab58365"
+      "sha": "ae50e2c99db2398c"
     },
     {
       "trigger": ";mocaj",
@@ -764,7 +764,7 @@
       "tags": [],
       "category": "認知症・認知機能",
       "file": "snippets/mocaj.json",
-      "sha": "d381f96a67312ef7"
+      "sha": "d201f58251b422c7"
     },
     {
       "trigger": ";tmt",
@@ -778,7 +778,7 @@
       ],
       "category": "認知症・認知機能",
       "file": "snippets/tmt.json",
-      "sha": "444653ee0cb9c62e"
+      "sha": "48c2ccd1f5a316ee"
     },
     {
       "trigger": ";brunnstrom",
