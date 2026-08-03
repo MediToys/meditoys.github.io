@@ -90,8 +90,8 @@
     },
     {
       "path": "snippets/neuro-vascular.json",
-      "size": 11892,
-      "sha": "657891c973118748"
+      "size": 11614,
+      "sha": "c97dd2eb2b4e2603"
     },
     {
       "path": "snippets/noudock.json",
@@ -100,8 +100,8 @@
     },
     {
       "path": "snippets/pecarn.json",
-      "size": 2394,
-      "sha": "7b38dc9aabef04af"
+      "size": 2097,
+      "sha": "763cbdc52e44ca8d"
     },
     {
       "path": "snippets/sample-snippets.json",
@@ -183,6 +183,14 @@
       "category": "ADL・機能評価",
       "file": "snippets/neuro-adl-function.json",
       "sha": "0d45564a2b74b2f9"
+    },
+    {
+      "trigger": ";pecarn",
+      "title": "PECARN 小児頭部外傷CT適応ルール",
+      "tags": [],
+      "category": "pecarn",
+      "file": "snippets/pecarn.json",
+      "sha": "e737e70e70f280f7"
     },
     {
       "trigger": ";gcs",
@@ -314,14 +322,6 @@
       "category": "神経・脳外科分類",
       "file": "snippets/neuro-tumor-other.json",
       "sha": "ede6bcb7a2fb38e2"
-    },
-    {
-      "trigger": ";pecarn",
-      "title": "PECARN 小児頭部外傷CT適応ルール",
-      "tags": [],
-      "category": "神経・脳外科分類",
-      "file": "snippets/pecarn.json",
-      "sha": "32ae5c0934fdc131"
     },
     {
       "trigger": ";scheie",
@@ -617,7 +617,7 @@
       "tags": [],
       "category": "脳血管内治療",
       "file": "snippets/neuro-vascular.json",
-      "sha": "8dd394c5005917fc"
+      "sha": "fd0afbd051f2ba23"
     },
     {
       "trigger": ";davf_borden",
