@@ -2,10 +2,10 @@
   "channel": "shared",
   "extension_version": "1.6.1",
   "counts": {
-    "snippets": 20,
-    "snippet_items": 80,
+    "snippets": 21,
+    "snippet_items": 81,
     "pdf_templates": 1,
-    "files": 22
+    "files": 23
   },
   "files": [
     {
@@ -17,6 +17,11 @@
       "path": "pdf/shindan_osaka.pdf",
       "size": 648845,
       "sha": "431a128eb5166d59"
+    },
+    {
+      "path": "snippets/canadian-ct-head.json",
+      "size": 2024,
+      "sha": "e16b7d159453f005"
     },
     {
       "path": "snippets/cdr-sb.json",
@@ -183,6 +188,14 @@
       "category": "ADL・機能評価",
       "file": "snippets/neuro-adl-function.json",
       "sha": "0d45564a2b74b2f9"
+    },
+    {
+      "trigger": ";cchr",
+      "title": "Canadian CT Head Rule（成人・軽症頭部外傷CT適応）",
+      "tags": [],
+      "category": "canadian-ct-head",
+      "file": "snippets/canadian-ct-head.json",
+      "sha": "9531fa7f6de14a6b"
     },
     {
       "trigger": ";pecarn",
