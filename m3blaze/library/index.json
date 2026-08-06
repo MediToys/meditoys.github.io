@@ -20,8 +20,8 @@
     },
     {
       "path": "snippets/canadian-ct-head.json",
-      "size": 2025,
-      "sha": "0f1bffe1df63969d"
+      "size": 2642,
+      "sha": "7412103ad96c2f82"
     },
     {
       "path": "snippets/cdr-sb.json",
@@ -195,7 +195,7 @@
       "tags": [],
       "category": "canadian-ct-head",
       "file": "snippets/canadian-ct-head.json",
-      "sha": "afb45f7df600c422"
+      "sha": "99fba46f97dff5eb"
     },
     {
       "trigger": ";pecarn",
