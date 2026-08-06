@@ -20,8 +20,8 @@
     },
     {
       "path": "snippets/canadian-ct-head.json",
-      "size": 2024,
-      "sha": "e16b7d159453f005"
+      "size": 2025,
+      "sha": "0f1bffe1df63969d"
     },
     {
       "path": "snippets/cdr-sb.json",
@@ -191,11 +191,11 @@
     },
     {
       "trigger": ";cchr",
-      "title": "Canadian CT Head Rule（成人・軽症頭部外傷CT適応）",
+      "title": "カナダ頭部CTルール（成人・軽症頭部外傷CT適応）",
       "tags": [],
       "category": "canadian-ct-head",
       "file": "snippets/canadian-ct-head.json",
-      "sha": "9531fa7f6de14a6b"
+      "sha": "afb45f7df600c422"
     },
     {
       "trigger": ";pecarn",
